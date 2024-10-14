@@ -43,6 +43,7 @@
       font-family: overpass;
       font-weight: 300;
       font-size: 22px;
+      cursor: pointer;
     }
   }
   .scroll-info-animation {
@@ -60,7 +61,7 @@
   }
 }
 
-@keyframes flyInAndPause {
+@keyframes flyInAndOut {
   0% {
     transform: translateY(-100%);
     opacity: 0;
@@ -71,10 +72,10 @@
   }
   100% {
     transform: translateY(0);
-    opacity: 1;
+    opacity: 0;
   }
 }
 
 .arrow-animation {
-  animation: flyInAndPause 1.5s ease-in-out infinite;
+  animation: flyInAndOut 1.5s ease-in-out infinite;
 }
