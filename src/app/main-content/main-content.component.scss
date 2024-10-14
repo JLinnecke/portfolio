@@ -1,0 +1,62 @@
+.main-content {
+    width: 1240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    h1 {
+        font-family: syne;
+        font-size: 128px;
+        font-weight: 800;
+        line-height: 128px;
+        text-align: center;
+    }
+}
+
+.subheadline-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    .subheadline {
+        border-top: 1px solid black;
+        width: 480px;
+    }
+    .name {
+        font-family: syne;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 48px;
+        color: #00BC8F;
+    }
+}
+
+.short-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 64px;
+    .rotate-mail {
+        rotate: -90deg;
+        a {
+            font-family: overpass;
+            font-weight: 300;
+            font-size: 22px;
+        }
+    }
+    .scroll-info-animation {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+        span {
+            width: 57px;
+            font-family: overpass;
+            font-weight: 300;
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+}
+

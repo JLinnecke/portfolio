@@ -2,16 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 1240px;
     height: 92px;
+    margin: 0 auto;
     .header-logo {
-        margin-left: 120px;
+    
         img {
             width: 80px;
             height: 80px;
         }
     }
     .header-burger-menu {
-        margin-right: 120px;
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
     }
 }
+
