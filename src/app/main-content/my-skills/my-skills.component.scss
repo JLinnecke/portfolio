@@ -15,10 +15,13 @@ h2 {
     letter-spacing: 1%;
     text-align: center;
     position: absolute;
-    top: 1580px;
+    top: 1670px;
     left: 35%;
     right: 35%;
     background-color: #fffcf3;
+    &:hover {
+        color: #00bc8f;
+    }
 }
 
 span {
