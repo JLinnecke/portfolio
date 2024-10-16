@@ -1,0 +1,68 @@
+.reference {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1240px;
+    h2 {
+        font-family: Syne;
+        font-weight: 800;
+        font-size: 78px;
+        line-height: 78px;
+        text-align: center;
+        &:hover {
+            color: #00BC8F;
+        }
+    }
+    p {
+        font-family: overpass;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+        width: 560px;
+    }
+}
+
+.references {
+    display: flex;
+    align-items: center;
+    width: 1240px; //width noch einmal überprüfen und gegebenfalls anpassen
+    margin-top: 100px;
+    gap: 24px;
+    .reference-card {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 397px;
+        border: 4px solid black;
+        padding: 16px 24px;
+        gap: 24px;
+        h4 {
+            font-family: Syne;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 26px;
+            text-align: center;
+            margin: 0;
+        }
+        span {
+            font-family: overpass;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+        }
+        p {
+            font-family: overpass;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            width: 365px;
+            height: 165px;
+        }
+    }
+}
