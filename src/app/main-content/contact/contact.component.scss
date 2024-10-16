@@ -1,0 +1,28 @@
+.contact {
+    width: 100%;
+    position: relative; // Für die Positionierung des Pseudo-Elements
+    overflow: hidden; // Verhindert, dass der Inhalt über den Container hinausgeht
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black; // Gleiche Hintergrundfarbe wie der Container
+        clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%); // Diagonale Form
+        z-index: -1; // Hinter den Inhalt legen
+    }
+
+    h3 {
+        width: 10%;
+        margin: 0 auto;
+        z-index: 1;
+        color: blue;
+        margin-top: 128px;
+    }
+    p {
+        color: white;
+    }
+}
