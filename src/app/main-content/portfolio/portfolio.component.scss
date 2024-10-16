@@ -1,0 +1,67 @@
+.portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2{
+        font-family: syne;
+        font-size: 78px;
+        font-weight: 800;
+        line-height: 78px;
+        text-align: center;
+        margin-bottom: 0;
+        width: 538px;
+        &:hover {
+            color: #00bc8f;
+        }
+    }
+
+    p {
+        font-family: overpass;
+        font-weight: 400;
+        font-size: 22px;
+        text-align: center;
+        width: 525px;
+    }
+}
+
+.join {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 118px;
+    margin-bottom: 64px; // das muss dann weg
+    h3 {
+        font-family: syne;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: right;
+    }
+    img {
+        width: 620px;
+        height: 339px;
+        padding-top: 50px;
+    }
+}
+
+.el-pollo-loco {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 64px;
+    margin-bottom: 64px; // das muss dann weg
+    h3 {
+        font-family: syne;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: left;
+    }
+    img {
+        width: 620px;
+        height: 339px;
+        padding-top: 50px;
+    }
+}
