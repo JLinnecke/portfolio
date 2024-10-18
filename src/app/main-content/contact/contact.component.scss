@@ -11,18 +11,180 @@
         width: 100%;
         height: 100%;
         background-color: black; // Gleiche Hintergrundfarbe wie der Container
-        clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%); // Diagonale Form
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); // Diagonale Form
         z-index: -1; // Hinter den Inhalt legen
     }
+}
 
+.contact-section {
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     h3 {
-        width: 10%;
-        margin: 0 auto;
-        z-index: 1;
-        color: blue;
-        margin-top: 128px;
+        font-family: syne;
+        font-size: 78px;
+        line-height: 78px;
+        text-align: left;
+        color: #fffcf3;
+        margin-top: 152px;
+        margin-bottom: 52px;
+        &:hover {
+            color: #00Bc8F;
+        }
     }
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fffcf3;
+    h4 {
+        font-family: overpass;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        color: #00Bc8F;
+        margin: 0;
+    }
+
     p {
-        color: white;
+        font-family: overpass;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: center;
+        color: #fffcf3;
     }
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        input {
+            width: 100%;
+            height: 50px;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid grey;
+            font-family: overpass;
+            font-size: 16px;
+            color: #333;
+            background-color: transparent;
+            &:hover {
+                border: 2px solid #fffcf3
+            }
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            border: none;
+            border-bottom: 2px solid grey;
+            font-family: overpass;
+            font-size: 16px;
+            color: #333;
+            background-color: transparent;
+            &:hover {
+                border: 2px solid #fffcf3
+            }
+        }
+    }
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    gap: 7px;
+    margin-bottom: 64px;
+
+    div {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background-color: #00Bc8F;
+            border-radius: 100%;
+        }
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        border: 2px solid white !important;
+        width: 18px !important;
+        height: 18px !important;
+        background-color: transparent;
+        z-index: 1;
+    }
+
+    label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: overpass;
+        font-size: 14px;
+        height: 27px;
+        color: #333;
+        a {
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 100px;
+            color: #00Bc8F;
+            text-decoration: none;
+            transition: font-weight 0.3s ease; // Übergangseffekt für die Schriftstärkeänderung
+        }
+    }
+    &:hover div {
+        background-color: #00Bc8F;
+        border-radius: 100%;
+    }
+
+    &:hover a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+.submit-scroll-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;;
+    button {
+        width: 280px;
+        height: 68px;
+        padding: 20px 60px;
+        background-color: transparent;
+        color: #5d5d5d;
+        border: 4px solid #5d5d5d;
+        gap: 10px;
+        font-family: overpass;
+        font-size: 23px;
+        text-align: center;
+        cursor: pointer;
+        &:hover {
+            
+            
+        }
+    }
+    img {
+        
+    };
 }
