@@ -2,25 +2,53 @@
   <div class="contact-section">
     <h3>Say Hi!</h3>
     <div class="form-container">
-        <h4> Want to discuss a new project?</h4>
-        <p>Say hello! let's discuss your ideas and make it happen</p>
-        <div class="form-input">
-            <form>
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Your email" required>
-                <textarea placeholder="Your message" required></textarea>
-                <div class="checkbox-container">
-                    <div><input type="checkbox" id="subscribe" name="subscribe"></div>
-                    <label for="subscribe">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
-                </div>
-                <div class="submit-scroll-section">
-                    <button type="submit">Send message</button>
-                    <a href="#header"><img src="./../../../assets/img/arrow-up.png" alt="scroll-up"></a> 
-                </div>
-            </form>
-        </div>
-    </div>
+      <h4>Want to discuss a new project?</h4>
+      <p>Say hello! let's discuss your ideas and make it happen</p>
+      <div class="form-input">
+        <form [formGroup]="contactForm">
+          <div class="input-container">
+            <input type="text" placeholder="Your name" formControlName="name" required>
+            <div class="validation-icon-container">
+              <span class="validation-icon invalid" style="margin-bottom: 9px;" #nameInvalidIcon>!</span> <!-- immer noch im test -->
+              <span class="validation-icon valid" #nameValidIcon>✔</span>
+            </div>
+            <div *ngIf="isInvalid('name')" class="error-message">
+              <div *ngIf="name?.errors?.['required']">Name is required.</div>
+              <div *ngIf="name?.errors?.['minLength']">Name must be at least 3 characters long.</div>
+              <div *ngIf="name?.errors?.['lettersOnly']">Name must contain only letters.</div>
+            </div>
+          </div>
+          <div class="input-container">
+            <input type="email" placeholder="Your email" formControlName="email" required>
+            <div class="validation-icon-container">
+              <span class="validation-icon invalid" #emailInvalidIcon>!</span>
+              <span class="validation-icon valid" #emailValidIcon>✔</span>
+            </div>
+            <div *ngIf="isInvalid('email')" class="error-message">
+              <div *ngIf="email?.errors?.['required']">Email is required.</div>
+              <div *ngIf="email?.errors?.['email']">Email must be a valid email address.</div>
+            </div>
+          </div>
+          <div class="input-container">
+            <textarea placeholder="Your message" formControlName="message" required></textarea>
+            <div class="validation-icon-container">
+              <span class="validation-icon invalid" #messageInvalidIcon>!</span>
+              <span class="validation-icon valid" #messageValidIcon>✔</span>
+            </div>
+            <div *ngIf="isInvalid('message')" class="error-message">
+              <div *ngIf="message?.errors?.['required']">Message is required.</div>
+            </div>
+          </div>
+          <div class="checkbox-container">
+            <div><input type="checkbox" id="subscribe" name="subscribe"></div>
+            <label for="subscribe">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
+          </div>
+          <div class="submit-scroll-section">
+            <button type="submit">Send message</button>
+            <a href="#header"><img src="./../../../assets/img/arrow-up.png" alt="scroll-up"></a>
+          </div>
+        </form>
+      </div>
   </div>
   <app-footer></app-footer>
 </div>
-

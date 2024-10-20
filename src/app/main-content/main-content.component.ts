@@ -10,7 +10,15 @@ import { ReferencesComponent } from './references/references.component';
 @Component({
   selector: 'app-main-content',
   standalone: true,
-  imports: [CommonModule, LandingpageComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, ReferencesComponent, ContactComponent],
+  imports: [
+    CommonModule, 
+    LandingpageComponent, 
+    AboutMeComponent, 
+    MySkillsComponent, 
+    PortfolioComponent, 
+    ReferencesComponent, 
+    ContactComponent
+  ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

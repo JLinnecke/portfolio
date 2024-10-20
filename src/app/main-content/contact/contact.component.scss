@@ -66,45 +66,83 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  
     form {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        input {
-            width: 100%;
-            max-width: 617px;
-            height: 50px;
-            margin: 10px 0;
-            padding: 10px;
-            border: none;
-            border-bottom: 2px solid grey;
-            font-family: overpass;
-            font-size: 16px;
-            color: #333;
-            background-color: transparent;
-            &:hover {
-                border: 2px solid #fffcf3
-            }
-        }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  
+      .input-container {
+        position: relative;
+        width: 100%;
+        max-width: 617px;
+        margin: 10px 0;
+      
+        input,
         textarea {
-            width: 100%;
-            max-width: 617px;
-            height: 100px;
-            margin: 10px 0;
-            padding: 10px;
-            border: none;
-            border-bottom: 2px solid grey;
-            font-family: overpass;
-            font-size: 16px;
-            color: #333;
-            background-color: transparent;
-            &:hover {
-                border: 2px solid #fffcf3
-            }
+          width: 100%;
+          padding-right: 40px; // Platz für das Symbol
+          height: 50px;
+          padding: 10px;
+          border: none;
+          border-bottom: 2px solid grey;
+          font-family: overpass;
+          font-size: 16px;
+          color: #333;
+          background-color: transparent;
+      
+          &:hover {
+            border: 2px solid #fffcf3;
+          }
         }
+      
+        textarea {
+          height: 100px;
+        }
+      
+        .validation-icon-container {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+        }
+      
+        .validation-icon {
+          position: absolute;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          display: none; // Standardmäßig unsichtbar
+          justify-content: center;
+          align-items: center;
+          font-size: 16px; // Konsistente Schriftgröße
+          line-height: 1; // Konsistente Zeilenhöhe
+          color: white;
+        }
+      
+        .validation-icon.invalid {
+          background-color: red;
+        }
+      
+        .validation-icon.valid {
+          background-color: green;
+        }
+      
+        .error-message {
+          color: red;
+          font-size: 12px;
+          font-family: overpass;
+          
+        }
+      }
     }
-}
+  }
 
 .checkbox-container {
     display: flex;
