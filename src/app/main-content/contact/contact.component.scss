@@ -135,10 +135,13 @@
         }
       
         .error-message {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
           color: red;
-          font-size: 12px;
+          font-size: 14px;
           font-family: overpass;
-          
+          gap: 8px;
         }
       }
     }

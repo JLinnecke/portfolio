@@ -24,7 +24,7 @@ export class ContactComponent implements AfterViewInit {
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, CustomValidators.minLength(3), CustomValidators.lettersOnly()]], // Anwenden der benutzerdefinierten Validatoren
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, CustomValidators.emailDomainValidator(['.de', '.com', '.net'])]],
       message: ['', Validators.required]
     });
   }

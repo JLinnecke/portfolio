@@ -13,9 +13,9 @@
               <span class="validation-icon valid" #nameValidIcon>✔</span>
             </div>
             <div *ngIf="isInvalid('name')" class="error-message">
-              <div *ngIf="name?.errors?.['required']">Name is required.</div>
-              <div *ngIf="name?.errors?.['minLength']">Name must be at least 3 characters long.</div>
-              <div *ngIf="name?.errors?.['lettersOnly']">Name must contain only letters.</div>
+              <div *ngIf="name?.errors?.['required'] || name?.errors?.['minLength'] || name?.errors?.['lettersOnly']">
+                Name is required, must be at least 3 characters long, and contain only letters.
+              </div>
             </div>
           </div>
           <div class="input-container">
@@ -25,8 +25,7 @@
               <span class="validation-icon valid" #emailValidIcon>✔</span>
             </div>
             <div *ngIf="isInvalid('email')" class="error-message">
-              <div *ngIf="email?.errors?.['required']">Email is required.</div>
-              <div *ngIf="email?.errors?.['email']">Email must be a valid email address.</div>
+              <div *ngIf="email?.errors?.['required'] || email?.errors?.['email'] || email?.errors?.['emailDomain']">Email is required, must be valid adress and end with .de .com or .net.</div>
             </div>
           </div>
           <div class="input-container">
@@ -36,7 +35,7 @@
               <span class="validation-icon valid" #messageValidIcon>✔</span>
             </div>
             <div *ngIf="isInvalid('message')" class="error-message">
-              <div *ngIf="message?.errors?.['required']">Message is required.</div>
+              <div *ngIf="message?.errors?.['required']">Your Message is empty.</div>
             </div>
           </div>
           <div class="checkbox-container">
@@ -44,7 +43,7 @@
             <label for="subscribe">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
           </div>
           <div class="submit-scroll-section">
-            <button type="submit">Send message</button>
+            <button type="submit" disabled>Send message</button>
             <a href="#header"><img src="./../../../assets/img/arrow-up.png" alt="scroll-up"></a>
           </div>
         </form>

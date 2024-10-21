@@ -21,3 +21,20 @@
     }
 }
 
+@media (min-width: 320px) and (max-width: 420px) {
+    .header {
+        width: 100%;
+        margin-bottom: 151px;
+        .header-logo {
+            img {
+                margin-left: 32px;
+            }
+        }
+    }
+    .header-burger-menu {
+        button {
+            margin-right: 32px;
+        }
+    }
+    
+}

@@ -10,10 +10,26 @@ export class CustomValidators {
     };
   }
 
+  
   static lettersOnly(): ValidatorFn {
     return (control: AbstractControl): ValidationErrors | null => {
       const lettersOnlyPattern = /^[a-zA-Z]+$/;
       return lettersOnlyPattern.test(control.value) ? null : { lettersOnly: true };
+    };
+  }
+
+
+  static emailDomainValidator(allowedDomains: string[]): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+      if (!control.value) {
+        return null; // Don't validate empty values to allow required validator to handle them
+      }
+      const email = control.value;
+      const domain = email.substring(email.lastIndexOf('@') + 1);
+      if (allowedDomains.some(allowedDomain => domain.endsWith(allowedDomain))) {
+        return null; // Valid domain
+      }
+      return { emailDomain: true }; // Invalid domain
     };
   }
 }

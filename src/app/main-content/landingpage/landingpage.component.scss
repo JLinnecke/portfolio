@@ -37,6 +37,7 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 64px;
+ 
   .rotate-mail {
     rotate: -90deg;
     a {
@@ -78,4 +79,38 @@
 
 .arrow-animation {
   animation: flyInAndOut 1.5s ease-in-out infinite;
+}
+
+//////////////////////////
+
+
+@media (min-width: 320px)  {
+  .main-content {
+    width: 100%;
+    h1 {
+      font-size: 35px;
+      line-height: 35px;
+    }
+    .subheadline-section {
+      gap: 16px;
+      margin-bottom: 152px;
+      .subheadline {
+        width: 100%;
+      }
+      .name {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .short-info {
+    display: flex;
+    justify-content: space-around;
+    .rotate-mail {
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+    }
+  }
 }
