@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-
+  openLink(url: string): void {
+    window.open(url, '_blank');
+  }
 }
