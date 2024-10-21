@@ -66,3 +66,21 @@
         }
     }
 }
+
+.arrow-bottom-left {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.arrow-bottom-left img {
+    display: block; /* Entfernt den zusätzlichen Abstand unter dem Bild */
+    transition: transform 0.3s ease; /* Sanfter Übergang für die Transformation */
+}
+  
+.arrow-bottom-left:hover img {
+    transform: scale(1.2) translate(-10%, 10%); /* Vergrößert das Bild und verschiebt es nach unten links */
+}
