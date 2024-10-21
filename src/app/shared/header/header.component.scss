@@ -21,19 +21,19 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 420px) {
+@media (max-width: 420px) {
     .header {
         width: 100%;
         margin-bottom: 151px;
         .header-logo {
             img {
-                margin-left: 32px;
+                margin-left: 16px;
             }
         }
     }
     .header-burger-menu {
         button {
-            margin-right: 32px;
+            margin-right: 16px;
         }
     }
     
