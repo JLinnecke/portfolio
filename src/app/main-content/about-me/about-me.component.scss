@@ -1,6 +1,6 @@
 .about-me {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start; // Vertikale Ausrichtung oben
     gap: 20px; // Abstand zwischen den Spalten
 
@@ -55,7 +55,7 @@ h2 {
     }
 }
 
-p {
+span {
     font-family: overpass;
     font-size: 22px;
     font-weight: 400;
@@ -79,19 +79,151 @@ p {
     transform: scale(1.2) translate(-10%, 10%); /* Vergrößert das Bild und verschiebt es nach unten links */
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1260px) {
     .about-me {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        .left{
-            width: 80%;
+         // Spalten untereinander anordnen
+        align-items: center; // Horizontale Ausrichtung zentrieren
+        padding: 40px; // Abstand zum Rand
+        .left {
+            width: 100%; // Volle Breite
+            h2 {
+                font-size: 50px;
+                line-height: 50px;
+            }
+            span {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .location, .work-preference {
+                gap: 5px; // Kleinerer Abstand zwischen den Elementen
+            }
+            .button-lets-talk {
+                button {
+                    padding: 15px 40px; // Kleinerer Button
+                    font-size: 20px;
+                    &:hover {
+                        width: 40%; // Breiterer Button beim Hovern
+                    }
+                }
+            }
+        }
+        .right {
+            img {
+                margin-top: -64px; // Bild nach oben verschieben
+                width: 100%; // Volle Breite
+            }
+        }
+    }
+    .arrow-bottom-left {
+        display: flex;
+        justify-content: flex-end; // Bild zentrieren
+        img {
+            margin-top: -50px; // Bild nach oben verschieben
+            padding-right: 30px;
+        }
+    }
+    
+}
+
+@media (max-width: 920px) {
+    .about-me {
+        .left {
+            h2 {
+                font-size: 40px;
+                line-height: 40px;
+            }
+            span {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            .location, .work-preference {
+                gap: 5px;
+            }
+            .button-lets-talk {
+                button {
+                    padding: 15px 40px;
+                    font-size: 18px;
+                    &:hover {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+        .right {
+            img {
+                margin-top: -64px;
+                width: 100%;
+            }
+        }
+    }
+    .arrow-bottom-left {
+        display: flex;
+        justify-content: flex-end;
+        img {
+            margin-top: -50px;
+            padding-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 760px) {
+    .about-me {
+        display: flex;
+        flex-direction: column; // Spalten untereinander anordnen
+
+        .left {
             h2 {
                 font-size: 35px;
                 line-height: 35px;
             }
-            p {
+            span {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            .location, .work-preference {
+                gap: 5px;
+            }
+            .button-lets-talk {
+                button {
+                    padding: 15px 40px;
+                    font-size: 18px;
+                    &:hover {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+        .right {
+            img {
+                margin-top: -64px;
+                width: 100%;
+            }
+        }
+    }
+    .arrow-bottom-left {
+        display: flex;
+        justify-content: flex-end;
+        img {
+            margin-top: -50px;
+            padding-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        .left{
+            width: 100%;
+            h2 {
+                font-size: 35px;
+                line-height: 35px;
+            }
+            span {
                 font-size: 18px;
                 line-height: 24px;
             }
@@ -119,4 +251,45 @@ p {
         display: flex;
         justify-content: center;
     }
-}   
+}  
+
+@media (max-width: 340px) {
+    .about-me {
+        padding: 40px;
+        .left {
+            gap: unset;
+            h2 {
+                font-size: 30px;
+                line-height: 30px;
+            }
+            span {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .button-lets-talk {
+                button {
+                    padding: 10px 30px;
+                    font-size: 16px;
+                    &:hover {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+        .right {
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .arrow-bottom-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        img {
+            margin-top: -50px;
+            width: 100px;
+        }
+    }
+}
