@@ -8,43 +8,6 @@
     align-items: center;
 }
 
-.logo-user {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-    img {
-        width: 60px;
-        height: 60px;
-    }
-
-    span {
-        color: white;
-    }
-}
-
-.socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 47px; // Abstand zwischen den Bildern
-
-    a {
-        display: inline-block; // Ermöglicht die Anwendung von transform
-        transition: transform 0.3s ease; // Übergangseffekt für die Transformation
-
-        &:hover {
-            transform: translateY(-15px); // Bewegt das Element um 5 Pixel nach oben
-        }
-
-        img {
-            width: 30px;
-            height: 30px;
-        }
-    }
-}
-
 .legal-notice {
     display: flex;
     justify-content: flex-end;

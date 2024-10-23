@@ -40,12 +40,32 @@ $JohannesLinnecke-theme: mat.define-light-theme((
 body {
     margin: 0;
     background-color: #fffcf3;
-    
+    //overflow-x: hidden;    
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px; /* Breite des Scrollbalkens */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Hintergrundfarbe des Scrollbalken-Tracks */
+  border-radius: 10px; /* Abgerundete Ecken des Scrollbalken-Tracks */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* Farbe des Scrollbalkens */
+  border-radius: 10px; /* Abgerundete Ecken des Scrollbalkens */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; /* Farbe des Scrollbalkens beim Hover */
+}
+

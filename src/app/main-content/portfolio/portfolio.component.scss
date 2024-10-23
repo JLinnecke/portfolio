@@ -43,6 +43,7 @@
     font-size: 48px;
     line-height: 58px;
     text-align: right;
+    width: 100%;
     margin-bottom: 0;
   }
   .project-img {
@@ -315,103 +316,69 @@
   }
 }
 
-@media (max-width: 1170px) {
-  .portfolio {
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+@keyframes fadeInDownRight {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, -100%);
   }
+  100% {
+    opacity: 1;
+    transform: translate(-55%, 5%); /* Endposition anpassen */
+  }
+}
 
+@keyframes fadeOutUpLeft {
+  0% {
+    opacity: 1;
+    transform: translate(-55%, 5%); /* Startposition anpassen */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-100%, -100%); /* Endposition anpassen */
+  }
+}
+
+@media (max-width: 1270px) {
   .join {
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-
-    .img-join {
-      margin-bottom: 20px;
+    img {
+      margin-left: 16px;
     }
-
-    .details-join {
-      position: absolute;
-      top: 435px;
-      right: 130px;
-      margin-top: 20px;
-      opacity: 0; /* Startzustand: unsichtbar */
-      transform: translateY(-100%); /* Startzustand: oberhalb des Containers */
-      transition: opacity 0.3s ease, transform 0.3s ease; /* Übergangseffekte */
-    }
-
-    &:hover .details-join {
-      opacity: 1; /* Endzustand: sichtbar */
-      transform: translateY(0); /* Endzustand: an der ursprünglichen Position */
-    }
-  }
-
-  .description-join {
-    position: absolute;
-    top: -50px;
-    right: 230px;
-
-    h3 {
-      font-size: 40px;
-      line-height: 40px;
-    }
-
-    p {
-      font-size: 20px;
+    .description-join {
+      h3 {
+        width: 95%;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .details-join {
+        display: flex;
+        margin-left: 64px;
+        span, p {
+          width: 95%;
+        }
+      }
     }
   }
 
   .el-pollo-loco {
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 280px auto 0 auto;
-    .img-pollo {
-      margin-bottom: 20px;
+    img {
+      margin-right: 16px;
     }
-
+    .description-pollo {
+      h3 {
+        margin-left: 16px;
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
     .details-pollo {
-      position: absolute;
-      top: 435px;
-      left: 120px;
-      margin-top: 20px;
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      opacity: 0; /* Startzustand: unsichtbar */
-      transform: translateY(-100%); /* Startzustand: oberhalb des Containers */
-      transition: opacity 0.3s ease, transform 0.3s ease; /* Übergangseffekte */
+      opacity: 1;
+      margin-left: 16px;
+      p {
+        width: 80%;
+      }
     }
-
-    &:hover .details-pollo {
-      opacity: 1; /* Endzustand: sichtbar */
-      transform: translateY(0); /* Endzustand: an der ursprünglichen Position */
-    }
-  }
-
-  .description-pollo {
-    position: absolute;
-    top: -50px;
-    left: 230px;
-
-    h3 {
-      font-size: 40px;
-      line-height: 40px;
-    }
-
-    p {
-      font-size: 20px;
-      text-align: right !important;
-    }
-
-    
   }
 }
+
+@media (max-width: 1100px) {}
