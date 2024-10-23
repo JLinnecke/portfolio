@@ -173,8 +173,8 @@ span {
 
         .left {
             h2 {
-                font-size: 35px;
-                line-height: 35px;
+                font-size: 45px;
+                line-height: 45px;
             }
             span {
                 font-size: 18px;
@@ -253,7 +253,7 @@ span {
     }
 }  
 
-@media (max-width: 340px) {
+@media (max-width: 380px) {
     .about-me {
         padding: 40px;
         .left {
@@ -288,7 +288,8 @@ span {
         align-items: center;
         width: 100%;
         img {
-            margin-top: -50px;
+            margin-top: -40px;
+            margin-bottom: 0;
             width: 100px;
         }
     }
