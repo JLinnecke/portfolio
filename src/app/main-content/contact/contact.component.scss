@@ -253,3 +253,47 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .contact-section {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .form-container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .form-input {
+        form {
+            .input-container {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+    }
+    .submit-scroll-section {
+      
+        button {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        img {
+            margin-left: 120px;
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 560px) {
+  .submit-scroll-section {
+    a {
+      display: none !important;
+    }
+    img {
+      display: none !important;
+    }
+  }
+}

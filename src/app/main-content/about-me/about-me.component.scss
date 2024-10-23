@@ -253,6 +253,18 @@ span {
     }
 }  
 
+@media (max-width: 395px) {
+    .arrow-bottom-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+        img {
+            width: 100px;
+        };
+    }
+}
+
 @media (max-width: 380px) {
     .about-me {
         padding: 40px;
@@ -282,15 +294,5 @@ span {
             }
         }
     }
-    .arrow-bottom-left {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        img {
-            margin-top: -40px;
-            margin-bottom: 0;
-            width: 100px;
-        }
-    }
+    
 }

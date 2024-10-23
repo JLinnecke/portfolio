@@ -97,9 +97,48 @@
         align-items: center;
         width: 100%;
         .reference-card {
+            margin-top: unset;
             width: 50%;
         }
     }
 
     
+}
+
+@media (max-width: 760px) {
+    h2 {
+        font-size: 45px !important;
+    }
+    p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px !important;
+        width: 100% !important;
+    }
+
+    
+}
+
+@media (max-width: 480px) {
+    .arrow-bottom-left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 435px) {
+    h2 {
+        font-size: 35px !important;
+    }
+}
+
+@media (max-width: 435px) {
+    .arrow-bottom-left {
+        img {
+            width: 100px;
+        }
+    }
 }
