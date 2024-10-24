@@ -1,0 +1,130 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  height: 92px;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  h2 {
+    font-size: 96px;
+    line-height: 96px;
+    font-weight: 700;
+    font-family: syne;
+    color: #000000;
+    margin-bottom: 16px;
+    position: relative; /* Setzt das h2-Element in den relativen Modus */
+  }
+
+  h2::after {
+    content: '';
+    position: absolute;
+    bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
+    left: -30px; /* Positioniert das Pseudo-Element am linken Rand */
+    width: 10%; /* Legt die Breite des Pseudo-Elements fest */
+    border-bottom: 4px solid #000000; /* Fügt den unteren Border hinzu */
+    transition: left 0.3s ease, width 0.3s ease; /* Übergangseffekt für die Position und Breite */
+  }
+
+  h2::before {
+    content: '';
+    position: absolute;
+    bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
+    left: -30px; /* Positioniert das Pseudo-Element am linken Rand */
+    height: 50%; /* Legt die Höhe des Pseudo-Elements fest */
+    border-left: 4px solid #000000; /* Fügt den linken Border hinzu */
+    transition: opacity 0.3s ease; /* Übergangseffekt für die Sichtbarkeit */
+  }
+
+  h2:hover::before {
+    opacity: 0; /* Blendet das Pseudo-Element aus */
+  }
+
+  h2:hover::after {
+    left: calc(100% - 150px); /* Positioniert das Pseudo-Element ganz rechts */
+    width: 40%; /* Reduziert die Breite des Pseudo-Elements */
+  }
+}
+
+.contact {
+  position: absolute; /* Setzt den Container in den absoluten Modus */
+  bottom: 0; /* Positioniert den Container am unteren Rand */
+  left: 0; /* Positioniert den Container am linken Rand */
+  background-color: transparent; /* Optional: Hintergrundfarbe des Containers */
+  width: 100vw;
+  margin: 0 auto;
+  z-index: 1;
+  overflow-x: hidden;
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black; // Gleiche Hintergrundfarbe wie der Container
+      clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%); // Diagonale Form
+      z-index: -1; // Hinter den Inhalt legen
+  }
+  h3 {
+   font-family: syne;
+   font-size: 78px;
+   line-height: 78px;
+   font-weight: 800;
+   margin-left: 104px;
+   margin-bottom: 32px;
+   color: white;
+   z-index: 1;
+   &:hover {
+       color: #00BC8F;
+   }
+  }
+}
+
+.mail-icons {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  .mail {
+    a {
+      text-decoration: none;
+      font-family: overpass;
+      font-size: 23px;
+      line-height: 23px;
+      font-weight: 300;
+      margin-left: 104px;
+      margin-bottom: 32px;
+      color: white;
+    }
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    margin-right: 104px;
+
+    .icon {
+      transition: transform 0.3s ease; /* Übergangseffekt für die Transformation */
+
+      &:hover {
+        transform: translateY(-15px); /* Bewegt das Icon 5px nach oben */
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

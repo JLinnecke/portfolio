@@ -40,6 +40,8 @@
  
   .rotate-mail {
     a {
+      text-decoration: none;
+      color: black;
       transform: rotate(-90deg);
       display: inline-block;
       transform-origin: top left;

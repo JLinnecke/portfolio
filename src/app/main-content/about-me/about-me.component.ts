@@ -10,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
 
+
+  constructor() { }
+
+  goToContact() {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }
