@@ -32,6 +32,16 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+
+    h3 {
+        font-family: syne;
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
   
     .img-join {
       position: relative; /* Setzt den Container in den relativen Modus */
@@ -64,7 +74,7 @@
       .circle-arrow-top-right {
         position: absolute; /* Setzt die Bilder in den absoluten Modus */
         left: 570px; /* Positioniert die Bilder rechts im Container */
-        top: 40%; /* Positioniert das Bild weiter oben */
+        top: 55%; /* Positioniert das Bild weiter oben */
         transform: translate(50%, -50%); /* Verschiebt die Bilder um die Hälfte ihrer Breite nach rechts und um die Hälfte ihrer Höhe nach oben */
         opacity: 0;
         transition: opacity 0.3s ease-in, transform 0.3s ease-in-out; /* Übergang für die Sichtbarkeit und Position */
@@ -204,17 +214,16 @@
     .circle-arrow-down,
     .circle-arrow-top-right {
       position: absolute; /* Setzt die Bilder in den absoluten Modus */
-      left: -85px; /* Positioniert die Bilder rechts im Container */
+      left: -95px; /* Positioniert die Bilder rechts im Container */
+      top: 60%;
       transform: translate(50%, -50%); /* Verschiebt die Bilder um die Hälfte ihrer Breite nach rechts und um die Hälfte ihrer Höhe nach oben */
       opacity: 0;
       transition: opacity 0.3s ease-in, transform 0.3s ease-in-out; /* Übergang für die Sichtbarkeit und Position */
     }
     .circle-arrow-down {
-      top: 40%; /* Positioniert das Bild weiter oben */
       transition-delay: 0s;
     }
     .circle-arrow-top-right {
-      top: 40%; /* Positioniert das Bild weiter oben */
       transition-delay: 0.1s;
     }
   }
