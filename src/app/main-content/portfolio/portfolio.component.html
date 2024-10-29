@@ -1,41 +1,59 @@
 <div id="portfolio" class="portfolio">
-  <h2>Portfolio</h2>
-  <p>Explore a selection of my work here - Interact with
-      projects to see my skills in action.
-  </p>
-  <div class="join">
+    <h2>Portfolio</h2>
+    <p>Explore a selection of my work here - Interact with
+        projects to see my skills in action.
+    </p>
+    <div class="join" (mouseenter)="toggleHoverJoin(true)" (mouseleave)="toggleHoverJoin(false)">
       <div class="img-join">
-          <img class="project-img" src="./../../../assets/portfolio/join-min.png" alt="join-project">
-          <img class="border-join" src="./../../../assets/portfolio/border.png" alt="border">
-          <img class="circle-arrow-down" src="./../../../assets/portfolio/circle_arrow_down.png" alt="circle-arrow-down">
-          <img class="circle-arrow-top-right" src="./../../../assets/portfolio/circle_arrow_top_right.png" alt="circle-arrow-top-right">
+        <img class="project-img" src="assets/portfolio/join-min.png" alt="join-project" [ngStyle]="{'filter': isHoveredJoin ? 'saturate(100%)' : 'saturate(0%)'}"> 
+        <img class="border-join" src="assets/portfolio/border.png" alt="border" [ngStyle]="{'opacity': isHoveredJoin ? '1' : '0'}"> 
+        <img class="circle-arrow-down" src="assets/portfolio/circle_arrow_down.png" alt="circle-arrow-down"
+             [ngStyle]="{
+               'opacity': isHoveredJoin ? '1' : '0',
+               'transform': isHoveredJoin ? 'translate(50%, -50%) rotate(-40deg)' : 'translate(50%, -50%) rotate(0deg)'
+             }">
+        <img class="circle-arrow-top-right" src="assets/portfolio/circle_arrow_top_right.png" alt="circle-arrow-top-right"
+             [ngStyle]="{
+               'opacity': isHoveredJoin ? '1' : '0',
+               'transform': isHoveredJoin ? 'translate(50%, -50%) rotate(0deg)' : 'translate(50%, -50%) rotate(180deg)'
+             }">
       </div>
       <div class="description-join">
-          <h3>01/02</h3>
-          <div class="details-join">
-              <h4>JOIN</h4>
-              <span>Javascript | HTML | CSS | Firebase</span>
-              <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assig users and categories.</p>
-              <button (click)="openLink('https://github.com/JLinnecke/join')">Github</button>
-          </div>
-      </div>
-  </div>
-
-    <div class="el-pollo-loco">
-        <div class="description-pollo">
-            <h3>02/02</h3>
-            <div class="details-pollo">
-                <h4>El Pollo Loco</h4>
-                <span>HTML | CSS | Javascript</span>
-                <p>A short jump and run game based on javascript developed with the principle of object orientation.</p>
-                <button>Github</button>
+        <h3>01/02</h3>
+            <div class="details-join" [ngStyle]="{'opacity': isHoveredJoin ? '1' : '0','transform': isHoveredJoin ? 'translateX(0)' : 'translateX(-100%)'}">
+                <h4>JOIN</h4>
+                <span>Javascript | HTML | CSS | Firebase | API</span>
+                <p>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assig users and categories.</p>
+                <button (click)="openLink('https://github.com/JLinnecke/join')">Github</button>
             </div>
         </div>
-        <div class="img-pollo">
-            <img class="project-img" src="assets/portfolio/elpolloloco-min.png" alt="el-pollo-loco-project"> 
-            <img class="border-pollo" src="assets/portfolio/border.png" alt="border"> 
-            <img class="circle-arrow-down" src="assets/portfolio/circle_arrow_down.png" alt="circle-arrow-down"> 
-            <img class="circle-arrow-top-right" src="assets/portfolio/circle_arrow_top_right.png" alt="circle-arrow-top-right">
-        </div>
     </div>
-</div>
+    <div class="el-pollo-loco" (mouseenter)="toggleHoverPollo(true)" (mouseleave)="toggleHoverPollo(false)">
+      <div class="description-pollo">
+        <h3>02/02</h3>
+        <div class="details-pollo" [ngStyle]="{
+               'opacity': isHoveredPollo ? '1' : '0',
+               'transform': isHoveredPollo ? 'translateX(0)' : 'translateX(100%)'
+             }">
+          <h4>El Pollo Loco</h4>
+          <span>HTML | CSS | Javascript</span>
+          <p>A short jump and run game based on javascript developed with the principle of object orientation.</p>
+          <button>Github</button>
+        </div>
+      </div>
+      <div class="img-pollo">
+        <img class="project-img" src="assets/portfolio/elpolloloco-min.png" alt="el-pollo-loco-project" [ngStyle]="{'filter': isHoveredPollo ? 'saturate(100%)' : 'saturate(0%)'}"> 
+        <img class="border-pollo" src="assets/portfolio/border.png" alt="border" [ngStyle]="{'opacity': isHoveredPollo ? '1' : '0'}"> 
+        <img class="circle-arrow-down" src="assets/portfolio/circle_arrow_down.png" alt="circle-arrow-down"
+             [ngStyle]="{
+               'opacity': isHoveredPollo ? '1' : '0',
+               'transform': isHoveredPollo ? 'translate(50%, -50%) rotate(-40deg)' : 'translate(50%, -50%) rotate(0deg)'
+             }">
+        <img class="circle-arrow-top-right" src="assets/portfolio/circle_arrow_top_right.png" alt="circle-arrow-top-right"
+             [ngStyle]="{
+               'opacity': isHoveredPollo ? '1' : '0',
+               'transform': isHoveredPollo ? 'translate(50%, -50%) rotate(0deg)' : 'translate(50%, -50%) rotate(180deg)'
+             }">
+      </div>
+    </div>
+  </div>

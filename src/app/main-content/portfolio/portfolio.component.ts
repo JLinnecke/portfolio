@@ -9,13 +9,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-  isHovered = false;
+  isHoveredJoin = false;
+  isHoveredPollo = false;
   
   openLink(url: string): void {
     window.open(url, '_blank');
   }
 
-  toggleHover(state: boolean) {
-    this.isHovered = state;
+  toggleHoverJoin(state: boolean) {
+    this.isHoveredJoin = state;
+  }
+
+  toggleHoverPollo(state: boolean) {
+    this.isHoveredPollo = state;
   }
 }
