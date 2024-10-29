@@ -4,25 +4,25 @@
   align-items: center;
   flex-direction: column;
 
-  h2 {
-    font-family: syne;
-    font-size: 78px;
-    font-weight: 800;
-    line-height: 78px;
-    text-align: center;
-    margin-bottom: 0;
-    width: 538px;
-    &:hover {
-      color: #00bc8f;
-    }
+  h2{
+      font-family: syne;
+      font-size: 78px;
+      font-weight: 800;
+      line-height: 78px;
+      text-align: center;
+      margin-bottom: 0;
+      width: 538px;
+      &:hover {
+          color: #00bc8f;
+      }
   }
 
   p {
-    font-family: overpass;
-    font-weight: 400;
-    font-size: 22px;
-    text-align: center;
-    width: 525px;
+      font-family: overpass;
+      font-weight: 400;
+      font-size: 22px;
+      text-align: center;
+      width: 525px;
   }
 }
 
@@ -32,19 +32,17 @@
   width: 100%;
   margin-top: 118px;
   margin-bottom: 64px; // das muss dann weg
-
   .img-join {
-    position: relative; /* Setzt den Container in den relativen Modus */
-    width: fit-content; /* Passt die Breite des Containers an den Inhalt an */
+      position: relative; /* Setzt den Container in den relativen Modus */
+      width: fit-content; /* Passt die Breite des Containers an den Inhalt an */
   }
   h3 {
-    font-family: syne;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 58px;
-    text-align: right;
-    width: 100%;
-    margin-bottom: 0;
+      font-family: syne;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 58px;
+      text-align: right;
+      margin-bottom: 0;
   }
   .project-img {
     width: 620px;
@@ -52,333 +50,244 @@
     padding-top: 50px;
     display: block;
     filter: saturate(0%);
-  }
+}
 
-  .border-join {
-    position: absolute; /* Setzt das Bild in den absoluten Modus */
-    top: 70px;
-    left: 20px;
-    width: 100%;
-    max-width: 620px;
-    max-height: 339px; /* Passt die Breite des Bildes an den Container an */
-    height: 100%; /* Passt die Höhe des Bildes an den Container an */
-    pointer-events: none; /* Verhindert, dass das Bild anklickbar ist */
-    opacity: 0;
-  }
+.border-join {
+  position: absolute; /* Setzt das Bild in den absoluten Modus */
+  top: 70px;
+  left: 20px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 339px; /* Passt die Breite des Bildes an den Container an */
+  height: 100%; /* Passt die Höhe des Bildes an den Container an */
+  pointer-events: none; /* Verhindert, dass das Bild anklickbar ist */
+  opacity: 0;
+}
+.circle-arrow-down {
+  position: absolute; /* Setzt die Bilder in den absoluten Modus */
+  left: 570px; /* Positioniert die Bilder rechts im Container */
+  top: 40%; /* Positioniert das Bild mittig vertikal */
+  transform: translate(50%, 50%) rotate(0deg); /* Verschiebt die Bilder um die Hälfte ihrer Breite nach rechts */
+  opacity: 0; /* Initiale Sichtbarkeit auf 0 setzen */
+  transition: opacity 0.1s ease-in, transform 0.3s ease-in-out; /* Übergang für die Sichtbarkeit und Position */
+  transition-delay: 0s;
+}
 
-  .circle-arrow-down,
-  .circle-arrow-top-right {
-    position: absolute; /* Setzt die Bilder in den absoluten Modus */
-    right: -20px; /* Positioniert die Bilder rechts im Container */
-    transform: translateX(
-      50%
-    ); /* Verschiebt die Bilder um die Hälfte ihrer Breite nach rechts */
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
-  }
-
-  .circle-arrow-down {
-    top: 60%; /* Positioniert das Bild mittig vertikal */
-    transform: translate(
-      50%,
-      -50%
-    ); /* Verschiebt das Bild um die Hälfte seiner Breite nach rechts und um die Hälfte seiner Höhe nach oben */
-    transition-delay: 0s;
-  }
-
-  .circle-arrow-top-right {
-    top: 60%; /* Positioniert das Bild ein Viertel der Höhe von oben */
-    transform: translate(
-      50%,
-      -50%
-    ); /* Verschiebt das Bild um die Hälfte seiner Breite nach rechts und um die Hälfte seiner Höhe nach oben */
-    transition-delay: 0.1s;
-  }
-
+.circle-arrow-top-right {
+  position: absolute; /* Setzt die Bilder in den absoluten Modus */
+  left: 570px; /* Positioniert die Bilder rechts im Container */
+  top: 40%; /* Positioniert das Bild ein Viertel der Höhe von oben */
+  transform: translate(50%, 50%) rotate(105deg); /* Initiale Drehung um 180 Grad */
+  opacity: 0; /* Initiale Sichtbarkeit auf 0 setzen */
+  transition: opacity 0.1s ease-in, transform 0.5s ease-in-out; /* Übergang für die Sichtbarkeit und Position */
+  transition-delay: 0.18s;
+}
   .details-join {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateX(-20%);
-    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-
-    h4 {
-      font-family: syne;
-      font-weight: 800;
-      font-size: 38px;
-      line-height: 38px;
-      text-align: left;
-      color: #000000;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-    span {
-      font-family: overpass;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 26px;
-      text-align: left;
-      color: #00bc8f;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-    p {
-      font-family: overpass;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 26px;
-      text-align: left;
-      color: #000000;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-    button {
-      border: 4px solid black;
-      background-color: transparent;
-      padding: 20px 60px;
-      font-family: overpass;
-      font-size: 23px;
-      font-weight: 400;
-      transition: width 0.9s ease, font-weight 0.3s ease;
-      &:hover {
-        width: 50%;
-        font-weight: 700;
-        border: 6px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateX(-20%);
+      transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+      h4 {
+          font-family: syne;
+          font-weight: 800;
+          font-size: 38px;
+          line-height: 38px;
+          text-align: left;
+          color: #000000;
+          margin-top: 8px;
+          margin-bottom: 8px;
       }
-    }
+      span {
+          font-family: overpass;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 26px;
+          text-align: left;
+          color: #00bc8f;
+          margin-top: 8px;
+          margin-bottom: 8px;
+      }
+      p {
+          font-family: overpass;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 26px;
+          text-align: left;
+          color: #000000;
+          margin-top: 8px;
+          margin-bottom: 8px;
+      }
+      button {
+          border: 4px solid black;
+          background-color: transparent;
+          padding: 20px 60px;
+          font-family: overpass;
+          font-size: 23px;
+          font-weight: 400;
+          transition: width 0.9s ease, font-weight 0.3s ease;
+          &:hover {
+              width: 50%;
+              font-weight: 700;
+              border: 6px solid black;
+          }
+      }
   }
   &:hover {
-    img {
-      filter: saturate(100%);
-    }
-    .border-join {
-      opacity: 1;
+      img {
+          filter: saturate(100%);
+      }
+      .border-join {
+        opacity: 1;
     }
     .circle-arrow-down {
-      opacity: 1;
+        opacity: 1;
+        transform: translate(50%, 50%) rotate(-40deg);
     }
     .circle-arrow-top-right {
-      opacity: 1;
+        opacity: 1;
+        transform: translate(50%, 50%) rotate(0deg);
     }
-    .details-join {
-      opacity: 1;
-      transform: translateX(0%);
-    }
+      .details-join {
+          opacity: 1;
+          transform: translateX(0%);
+      }
   }
 }
 
+
+
+////////////////////////////////////////////////////////
 .el-pollo-loco {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 118px;
   margin-bottom: 64px; // das muss dann weg
-
   h3 {
-    font-family: syne;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 58px;
-    text-align: left;
-    margin-bottom: 0;
-  }
-
-  .details-pollo {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
-
-    h4 {
       font-family: syne;
-      font-weight: 800;
-      font-size: 38px;
-      line-height: 38px;
-      text-align: left;
-      color: #000000;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-
-    span {
-      font-family: overpass;
       font-weight: 400;
-      font-size: 22px;
-      line-height: 26px;
+      font-size: 48px;
+      line-height: 58px;
       text-align: left;
-      color: #00bc8f;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      font-family: overpass;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 26px;
-      text-align: left;
-      color: #000000;
-      margin-top: 8px;
-      margin-bottom: 8px;
-    }
-
-    button {
-      border: 4px solid black;
-      background-color: transparent;
-      padding: 20px 60px;
-      font-family: overpass;
-      font-size: 23px;
-      font-weight: 400;
-      transition: width 0.9s ease, font-weight 0.3s ease;
-      &:hover {
-        width: 50%;
-        font-weight: 700;
-        border: 6px solid black;
+      margin-bottom: 0;
+  }
+  .details-pollo {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+      h4 {
+          font-family: syne;
+          font-weight: 800;
+          font-size: 38px;
+          line-height: 38px;
+          text-align: left;
+          color: #000000;
+          margin-top: 8px;
+          margin-bottom: 8px;
       }
-    }
+      span {
+          font-family: overpass;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 26px;
+          text-align: left;
+          color: #00bc8f;
+          margin-top: 8px;
+          margin-bottom: 8px;
+      }
+      p {
+          font-family: overpass;
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 26px;
+          text-align: left;
+          color: #000000;
+          margin-top: 8px;
+          margin-bottom: 8px;
+      }
+      button {
+          border: 4px solid black;
+          background-color: transparent;
+          padding: 20px 60px;
+          font-family: overpass;
+          font-size: 23px;
+          font-weight: 400;
+          transition: width 0.9s ease, font-weight 0.3s ease;
+          &:hover {
+              width: 50%;
+              font-weight: 700;
+              border: 6px solid black;
+          }
+      }
   }
-
+  
   .img-pollo {
-    position: relative; /* Setzt den Container in den relativen Modus */
-    width: fit-content; /* Passt die Breite des Containers an den Inhalt an */
+      position: relative; /* Setzt den Container in den relativen Modus */
+      width: fit-content; /* Passt die Breite des Containers an den Inhalt an */
   }
-
   .project-img {
-    width: 620px;
-    height: 339px;
-    padding-top: 50px;
-    display: block;
-    filter: saturate(0%);
+      width: 620px;
+      height: 339px;
+      padding-top: 50px;
+      display: block;
+      filter: saturate(0%);
   }
-
   .border-pollo {
-    position: absolute; /* Setzt das Bild in den absoluten Modus */
-    top: 70px;
-    right: 20px;
-    width: 100%;
-    max-width: 620px;
-    max-height: 339px; /* Passt die Breite des Bildes an den Container an */
-    height: 100%; /* Passt die Höhe des Bildes an den Container an */
-    pointer-events: none; /* Verhindert, dass das Bild anklickbar ist */
-    opacity: 0;
-  }
-  .circle-arrow-down,
-  .circle-arrow-top-right {
-    position: absolute; /* Setzt die Bilder in den absoluten Modus */
-    left: -85px; /* Positioniert die Bilder rechts im Container */
-    transform: translateX(
-      50%
-    ); /* Verschiebt die Bilder um die Hälfte ihrer Breite nach rechts */
-    opacity: 0;
-    transition: opacity 0.3s ease-in;
-  }
-
-  .circle-arrow-down {
-    top: 60%; /* Positioniert das Bild mittig vertikal */
-    transform: translate(
-      50%,
-      -50%
-    ); /* Verschiebt das Bild um die Hälfte seiner Breite nach rechts und um die Hälfte seiner Höhe nach oben */
-    transition-delay: 0s;
-  }
-
-  .circle-arrow-top-right {
-    top: 60%; /* Positioniert das Bild ein Viertel der Höhe von oben */
-    transform: translate(
-      50%,
-      -50%
-    ); /* Verschiebt das Bild um die Hälfte seiner Breite nach rechts und um die Hälfte seiner Höhe nach oben */
-    transition-delay: 0.1s;
-  }
-
-  &:hover {
-    img {
-      filter: saturate(100%);
-    }
-    .border-pollo {
-      opacity: 1;
+      position: absolute; /* Setzt das Bild in den absoluten Modus */
+      top: 70px;
+      right: 20px;
+      width: 100%;
+      max-width: 620px;
+      max-height: 339px; /* Passt die Breite des Bildes an den Container an */
+      height: 100%; /* Passt die Höhe des Bildes an den Container an */
+      pointer-events: none; /* Verhindert, dass das Bild anklickbar ist */
+      opacity: 0;
     }
     .circle-arrow-down {
-      opacity: 1;
+        position: absolute; /* Setzt die Bilder in den absoluten Modus */
+        left: -85px; /* Positioniert die Bilder rechts im Container */
+        top: 40%;
+        transform: translate(50%, 50%) rotate(0deg); /* Verschiebt die Bilder um die Hälfte ihrer Breite nach rechts */
+        opacity: 0; /* Initiale Sichtbarkeit auf 0 setzen */
+        transition: opacity 0.1s ease-in, transform 0.3s ease-in-out; /* Übergang für die Sichtbarkeit und Position */
+        transition-delay: 0s;
+    }
+
+    .circle-arrow-top-right {
+        position: absolute; /* Setzt die Bilder in den absoluten Modus */
+        left: -95px; /* Positioniert die Bilder rechts im Container */
+        top: 40%;
+        transform: translate(50%, 50%) rotate(105deg); /* Initiale Drehung um 180 Grad */
+        opacity: 0; /* Initiale Sichtbarkeit auf 0 setzen */
+        transition: opacity 0.1s ease-in, transform 0.5s ease-in-out; /* Übergang für die Sichtbarkeit und Position */
+        transition-delay: 0.18s;
+    }
+
+  &:hover {
+      img {
+          filter: saturate(100%);
+      }
+      .border-pollo {
+          opacity: 1;
+      }
+      .circle-arrow-down {
+        opacity: 1;
+        transform: translate(50%, 50%) rotate(-40deg);
     }
     .circle-arrow-top-right {
-      opacity: 1;
+        opacity: 1;
+        transform: translate(50%, 50%) rotate(0deg);
     }
-    .details-pollo {
-      opacity: 1;
-      transform: translateX(0%);
-    }
+      .details-pollo {
+          opacity: 1;
+          transform: translateX(0%);
+      }
   }
 }
-
-@keyframes fadeInDownRight {
-  0% {
-    opacity: 0;
-    transform: translate(-100%, -100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-55%, 5%); /* Endposition anpassen */
-  }
-}
-
-@keyframes fadeOutUpLeft {
-  0% {
-    opacity: 1;
-    transform: translate(-55%, 5%); /* Startposition anpassen */
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-100%, -100%); /* Endposition anpassen */
-  }
-}
-
-@media (max-width: 1270px) {
-  .join {
-    img {
-      margin-left: 16px;
-    }
-    .description-join {
-      h3 {
-        width: 95%;
-        display: flex;
-        justify-content: flex-end;
-      }
-      .details-join {
-        display: flex;
-        margin-left: 64px;
-        span, p {
-          width: 95%;
-        }
-      }
-    }
-  }
-
-  .el-pollo-loco {
-    img {
-      margin-right: 16px;
-    }
-    .description-pollo {
-      h3 {
-        margin-left: 16px;
-        display: flex;
-        justify-content: flex-start;
-      }
-    }
-    .details-pollo {
-      display: flex;
-      opacity: 1;
-      margin-left: 16px;
-      p {
-        width: 80%;
-      }
-    }
-  }
-}
-
-@media (max-width: 1100px) {}
