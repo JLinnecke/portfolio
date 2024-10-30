@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,18 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './portfolio.component.scss'
 })
 export class PortfolioComponent {
-  isHoveredJoin = false;
-  isHoveredPollo = false;
-  
   openLink(url: string): void {
     window.open(url, '_blank');
-  }
-
-  toggleHoverJoin(state: boolean) {
-    this.isHoveredJoin = state;
-  }
-
-  toggleHoverPollo(state: boolean) {
-    this.isHoveredPollo = state;
   }
 }
