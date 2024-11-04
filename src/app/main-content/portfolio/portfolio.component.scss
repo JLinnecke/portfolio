@@ -31,11 +31,10 @@
   justify-content: space-between;
   width: 100%;
   margin-top: 118px;
-  margin-bottom: 64px; // das muss dann weg
 
   .img-join {
-    position: relative; /* Setzt den Container in den relativen Modus */
-    width: fit-content; /* Passt die Breite des Containers an den Inhalt an */
+    position: relative; 
+    width: fit-content; 
     z-index: 2;
 
     .project-img {
@@ -183,164 +182,162 @@
     transform: translateX(0%);
   }
 }
-////////////////////////
+
 .el-pollo-loco {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 118px;
-    margin-bottom: 64px; // das muss dann weg
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 118px;
+  .img-pollo {
+    position: relative; 
+    width: fit-content; 
+    z-index: 2;
 
-    .img-pollo {
-      position: relative; /* Setzt den Container in den relativen Modus */
-      width: fit-content; /* Passt die Breite des Containers an den Inhalt an */
-      z-index: 2;
-
-      .project-img {
-        width: 620px;
-        height: 339px;
-        padding-top: 50px;
-        display: block;
-        filter: saturate(0%);
-        transition: filter 0.3s ease-in-out;
-      }
-
-      .border-img {
-        position: absolute;
-        top: 40px;
-        right: 20px;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        img {
-          position: absolute;
-        }
-
-        .border-pollo {
-          width: 100%;
-          max-width: 620px;
-          max-height: 339px;
-          height: 100%;
-          pointer-events: none;
-          opacity: 0;
-          transition: opacity 0.3s ease-in-out;
-        }
-
-        .circle-arrow-down {
-          left: 0;
-          top: 0;
-          transform: translate(-50%, 220%) rotate(0deg);
-          opacity: 0;
-          transition: opacity 0.1s ease-in, transform 0.3s ease-in-out;
-          transition-delay: 0s;
-        }
-
-        .circle-arrow-top-right {
-          left: 0;
-          top: 0;
-          transform: translate(-50%, 200%) rotate(105deg);
-          opacity: 0;
-          transition: opacity 0.1s ease-in, transform 0.5s ease-in-out;
-          transition-delay: 0.18s;
-        }
-      }
+    .project-img {
+      width: 620px;
+      height: 339px;
+      padding-top: 50px;
+      display: block;
+      filter: saturate(0%);
+      transition: filter 0.3s ease-in-out;
     }
 
-    h3 {
-      font-family: syne;
-      font-weight: 400;
-      font-size: 48px;
-      line-height: 58px;
-      text-align: left;
-      margin-bottom: 0;
-    }
-
-    .details-pollo {
+    .border-img {
+      position: absolute;
+      top: 40px;
+      right: 20px;
+      width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      flex-direction: column;
-      opacity: 0;
-      z-index: 1;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+      align-items: center;
 
-      h4 {
-        font-family: syne;
-        font-weight: 800;
-        font-size: 38px;
-        line-height: 38px;
-        text-align: left;
-        color: #000000;
-        margin-top: 8px;
-        margin-bottom: 8px;
+      img {
+        position: absolute;
       }
 
-      span {
-        font-family: overpass;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 26px;
-        text-align: left;
-        color: #00bc8f;
-        margin-top: 8px;
-        margin-bottom: 8px;
+      .border-pollo {
+        width: 100%;
+        max-width: 620px;
+        max-height: 339px;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
       }
 
-      p {
-        font-family: overpass;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 26px;
-        text-align: left;
-        color: #000000;
-        margin-top: 8px;
-        margin-bottom: 8px;
+      .circle-arrow-down {
+        left: 0;
+        top: 0;
+        transform: translate(-50%, 220%) rotate(0deg);
+        opacity: 0;
+        transition: opacity 0.1s ease-in, transform 0.3s ease-in-out;
+        transition-delay: 0s;
       }
 
-      button {
-        border: 4px solid black;
-        background-color: transparent;
-        padding: 20px 60px;
-        font-family: overpass;
-        font-size: 23px;
-        font-weight: 400;
-        transition: width 0.9s ease, font-weight 0.3s ease;
-
-        &:hover {
-          width: 50%;
-          font-weight: 700;
-          border: 6px solid black;
-        }
+      .circle-arrow-top-right {
+        left: 0;
+        top: 0;
+        transform: translate(-50%, 200%) rotate(105deg);
+        opacity: 0;
+        transition: opacity 0.1s ease-in, transform 0.5s ease-in-out;
+        transition-delay: 0.18s;
       }
-    }
-
-    &:hover .img-pollo .project-img {
-      filter: saturate(100%);
-    }
-
-    &:hover .img-pollo .border-img .border-pollo {
-      opacity: 1;
-    }
-
-    &:hover .img-pollo .border-img .circle-arrow-down {
-      opacity: 1;
-      transform: translate(-50%, 220%) rotate(-40deg);
-    }
-
-    &:hover .img-pollo .border-img .circle-arrow-top-right {
-      opacity: 1;
-      transform: translate(-50%, 200%) rotate(0deg);
-    }
-
-    &:hover .details-pollo {
-      opacity: 1;
-      transform: translateX(0%);
     }
   }
+
+  h3 {
+    font-family: syne;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .details-pollo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+
+    h4 {
+      font-family: syne;
+      font-weight: 800;
+      font-size: 38px;
+      line-height: 38px;
+      text-align: left;
+      color: #000000;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    span {
+      font-family: overpass;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: left;
+      color: #00bc8f;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-family: overpass;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: left;
+      color: #000000;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    button {
+      border: 4px solid black;
+      background-color: transparent;
+      padding: 20px 60px;
+      font-family: overpass;
+      font-size: 23px;
+      font-weight: 400;
+      transition: width 0.9s ease, font-weight 0.3s ease;
+
+      &:hover {
+        width: 50%;
+        font-weight: 700;
+        border: 6px solid black;
+      }
+    }
+  }
+
+  &:hover .img-pollo .project-img {
+    filter: saturate(100%);
+  }
+
+  &:hover .img-pollo .border-img .border-pollo {
+    opacity: 1;
+  }
+
+  &:hover .img-pollo .border-img .circle-arrow-down {
+    opacity: 1;
+    transform: translate(-50%, 220%) rotate(-40deg);
+  }
+
+  &:hover .img-pollo .border-img .circle-arrow-top-right {
+    opacity: 1;
+    transform: translate(-50%, 200%) rotate(0deg);
+  }
+
+  &:hover .details-pollo {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 
 @media (max-width: 1270px) {
   .join {
@@ -356,7 +353,7 @@
     .img-join {
       position: absolute;
       top: 64px;
-      z-index: 2; /* Image above the details container */
+      z-index: 2; 
 
       .border-img {
         top: 70px;
@@ -382,8 +379,8 @@
           top: 0;
           width: unset;
           height: unset;
-          transform: translate(50%, 170%) rotate(0deg); /* Verschiebt die Bilder um die Hälfte ihrer Breite nach rechts */
-          opacity: 0; /* Initiale Sichtbarkeit auf 0 setzen */
+          transform: translate(50%, 170%) rotate(0deg); 
+          opacity: 0; 
           transition: opacity 0.1s ease-in, transform 0.3s ease-in-out;
         }
 
@@ -392,8 +389,8 @@
           top: 0;
           width: unset;
           height: unset;
-          transform: translate(50%, 150%) rotate(105deg); /* Initiale Drehung um 180 Grad */
-          opacity: 0; /* Initiale Sichtbarkeit auf 0 setzen */
+          transform: translate(50%, 150%) rotate(105deg); 
+          opacity: 0; 
           transition: opacity 0.1s ease-in, transform 0.5s ease-in-out;
         }
       }
@@ -417,7 +414,7 @@
       }
     }
   }
-  //////////////////////////////////////////////////////
+  
   .el-pollo-loco {
     flex-direction: column;
     align-items: center;
@@ -446,7 +443,7 @@
     }
   }
 }
-////////////////////////////////////////////////////////////
+
 @media (max-width: 860px) {
   .portfolio {
     h2 {
@@ -460,16 +457,595 @@
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 768px) {
   .join {
     .img-join {
-      width: 80%;
+      .project-img {
+        width: 100%;
+        max-width: 516px;
+        max-height: 300px;
+        height: auto;
+        min-width: 320px;
+        min-height: 200px;
+      }
+      .border-img {
+        .border-join {
+          max-width: 516px !important;
+          max-height: 250px !important;
+        }
+        .circle-arrow-down {
+          transform: translate(50%, 120%) rotate(0deg);
+        }
+        .circle-arrow-top-right {
+          transform: translate(50%, 100%) rotate(105deg);
+        }
+      }
+    }
+
+    .details-join {
+      transform: translate(1%, 50%);
+      h4 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      span {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      button {
+        font-size: 20px;
+        padding: 15px 50px;
+      }
+    }
+
+    &:hover {
+      .details-join {
+        opacity: 1;
+        transform: translate(1%, 165%);
+      }
+      .circle-arrow-down {
+        opacity: 1;
+        transform: translate(50%, 120%) rotate(-40deg) !important;
+      }
+      .circle-arrow-top-right {
+        opacity: 1;
+        transform: translate(50%, 100%) rotate(0deg) !important;
+      }
+    }
+  }
+
+  .el-pollo-loco {
+    .img-pollo {
+      .project-img {
+        width: 100%;
+        max-width: 516px;
+        max-height: 300px;
+        height: auto;
+        min-width: 320px;
+        min-height: 200px;
+      }
+      .border-img {
+        .border-pollo {
+          max-width: 516px !important;
+          max-height: 250px !important;
+        }
+        .circle-arrow-down {
+          transform: translate(-50%, 170%) rotate(0deg);
+        }
+        .circle-arrow-top-right {
+          transform: translate(-50%, 150%) rotate(105deg);
+        }
+      }
+    }
+    .details-pollo {
+      transform: translate(-20%, 40%);
+      h4 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      span {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      button {
+        font-size: 20px;
+        padding: 15px 50px;
+      }
+    }
+
+    &:hover {
+      .details-pollo {
+        opacity: 1;
+        transform: translate(0%, 175%);
+      }
+      .circle-arrow-down {
+        transform: translate(-50%, 170%) rotate(-40deg) !important;
+        opacity: 1;
+      }
+      .circle-arrow-top-right {
+        transform: translate(-50%, 150%) rotate(0deg) !important;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .portfolio {
+    h2 {
+      font-size: 35px;
+      line-height: 35px;
+      width: 400px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 22px;
+      width: 400px;
+    }
+  }
+
+  .join {
+    .img-join {
+      .project-img {
+        width: 100%;
+        max-width: 400px;
+        max-height: 300px;
+        height: auto;
+        min-width: 320px;
+        min-height: 200px;
+      }
+      .border-img {
+        .border-join {
+          max-width: 400px !important;
+          max-height: 200px !important;
+          opacity: 0;
+        }
+        .circle-arrow-down {
+          transform: translate(50%, 200%) rotate(0deg);
+          width: 10%;
+          opacity: 0;
+        }
+        .circle-arrow-top-right {
+          transform: translate(50%, 200%) rotate(105deg);
+          width: 10%;
+          opacity: 0;
+        }
+      }
+    }
+
+    .details-join {
+      transform: translate(28%, 50%);
+      width: 70%;
+      p {
+        font-size: 18px;
+        line-height: 22px;
+        width: 80%;
+      }
+    }
+
+    &:hover {
+      .details-join {
+        opacity: 1;
+        transform: translate(28%, 135%);
+      }
+      .circle-arrow-down {
+        transform: translate(50%, 200%) rotate(-40deg) !important;
+      }
+      .circle-arrow-top-right {
+        transform: translate(50%, 200%) rotate(0deg) !important;
+      }
+    }
+  }
+
+  .el-pollo-loco {
+    .img-pollo {
+      .project-img {
+        width: 100%;
+        max-width: 400px;
+        max-height: 300px;
+        height: auto;
+        min-width: 320px;
+        min-height: 200px;
+      }
+      .border-img {
+        .border-pollo {
+          max-width: 400px !important;
+          max-height: 200px !important;
+        }
+        .circle-arrow-down {
+          transform: translate(-47%, 250%) rotate(0deg);
+          width: 10%;
+        }
+        .circle-arrow-top-right {
+          transform: translate(-47%, 250%) rotate(105deg);
+          width: 10%;
+        }
+      }
+    }
+    .details-pollo {
+      transform: translate(0%, 40%);
+      width: 70%;
+      p {
+        font-size: 18px;
+        line-height: 22px;
+        width: 80%;
+      }
+    }
+
+    &:hover {
+      .details-pollo {
+        opacity: 1;
+        transform: translate(15%, 145%);
+      }
+      .circle-arrow-down {
+        transform: translate(-47%, 250%) rotate(-40deg) !important;
+      }
+      .circle-arrow-top-right {
+        transform: translate(-47%, 250%) rotate(0deg) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 510px) {
+  .join {
+    width: 100%;
+    .img-join {
       display: flex;
       justify-content: center;
       align-items: center;
-      img {
-        width: 100%;
-        height: 100%;
+      .project-img {
+        width: 50%;
+      }
+      .border-img {
+        .border-join {
+          width: 80%;
+          left: 30px;
+          top: -10px;
+        }
+        .circle-arrow-down {
+          transform: translate(-75%, 160%) rotate(0deg);
+          width: 10%;
+        }
+        .circle-arrow-top-right {
+          transform: translate(-75%, 160%) rotate(105deg);
+          width: 10%;
+        }
+      }
+    }
+    .description-join {
+      h3 {
+        font-size: 23px;
+      }
+      .details-join {
+        transform: translate(23%, 40%);
+        width: 80%;
+        h4 {
+          font-size: 26px;
+        }
+      }
+    }
+
+    &:hover {
+      .details-join {
+        opacity: 1;
+        transform: translate(23%, 125%) !important;
+      }
+      .border-img .border-join {
+        opacity: 1;
+      }
+      .border-img .circle-arrow-down {
+        opacity: 1;
+        transform: translate(-75%, 160%) rotate(-40deg) !important;
+      }
+      .border-img .circle-arrow-top-right {
+        opacity: 1;
+        transform: translate(-75%, 160%) rotate(0deg) !important;
+      }
+    }
+  }
+
+  .el-pollo-loco {
+    width: 100%;
+    margin-top: 0;
+    .img-pollo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .project-img {
+        width: 50%;
+      }
+      .border-img {
+        .border-pollo {
+          width: 80%;
+          left: 50px;
+          top: 20px;
+        }
+        .circle-arrow-down {
+          transform: translate(77%, 230%) rotate(0deg);
+          width: 10%;
+        }
+        .circle-arrow-top-right {
+          transform: translate(77%, 230%) rotate(105deg);
+          width: 10%;
+        }
+      }
+    }
+    .description-pollo {
+      h3 {
+        font-size: 23px;
+      }
+      .details-pollo {
+        transform: translate(2%, 40%);
+        width: 80%;
+        h4 {
+          font-size: 26px;
+        }
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &:hover {
+      .details-pollo {
+        opacity: 1;
+        transform: translate(2%, 135%) !important;
+      }
+      .border-img .border-pollo {
+        opacity: 1;
+      }
+      .border-img .circle-arrow-down {
+        opacity: 1;
+        transform: translate(77%, 230%) rotate(-40deg) !important;
+      }
+      .border-img .circle-arrow-top-right {
+        opacity: 1;
+        transform: translate(77%, 230%) rotate(0deg) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .portfolio {
+    overflow-x: hidden;
+  }
+  .join {
+    width: 100%;
+    margin-bottom: 250px;
+    .img-join {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .project-img {
+        width: 80%;
+        height: auto;
+        min-width: unset;
+        min-height: unset;
+      }
+      .border-img {
+        .border-join {
+          width: 80%;
+          height: 75%;
+          top: -10px;
+          left: 30px;
+        }
+        .circle-arrow-down {
+          transform: translate(-75%, 100%) rotate(0deg);
+          width: 10%;
+        }
+        .circle-arrow-top-right {
+          transform: translate(-75%, 100%) rotate(105deg);
+          width: 10%;
+        }
+      }
+    }
+
+    &:hover {
+      .details-join {
+        transform: translate(23%, 100%) !important;
+      }
+      .border-img .circle-arrow-down {
+        transform: translate(-75%, 100%) rotate(-40deg) !important;
+      }
+      .border-img .circle-arrow-top-right {
+        transform: translate(-75%, 100%) rotate(0deg) !important;
+      }
+    }
+  }
+
+  .el-pollo-loco {
+    width: 100%;
+    .img-pollo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .project-img {
+        width: 80%;
+        height: auto;
+        min-width: unset;
+        min-height: unset;
+      }
+      .border-img {
+        .border-pollo {
+          width: 80%;
+          height: 75%;
+          top: 20px;
+          left: 50px;
+        }
+        .circle-arrow-down {
+          transform: translate(75%, 180%) rotate(0deg);
+          width: 10%;
+        }
+        .circle-arrow-top-right {
+          transform: translate(75%, 180%) rotate(105deg);
+          width: 10%;
+        }
+      }
+    }
+
+    &:hover {
+      .details-pollo {
+        transform: translate(2%, 115%) !important;
+      }
+      .border-img .circle-arrow-down {
+        transform: translate(75%, 180%) rotate(-40deg) !important;
+      }
+      .border-img .circle-arrow-top-right {
+        transform: translate(75%, 180%) rotate(0deg) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 402px) {
+  .portfolio {
+    h2 {
+      font-size: 30px;
+      line-height: 30px;
+      width: 300px;
+    }
+    p {
+      width: 200px;
+    }
+
+    .el-pollo-loco {
+      .border-img {
+        .circle-arrow-down {
+          transform: translate(80%, 180%) rotate(0deg);
+        }
+        .circle-arrow-top-right {
+          transform: translate(75%, 180%) rotate(105deg);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .join {
+    .img-join {
+      justify-content: flex-start;
+      margin-left: 16px;
+      width: 100%;
+      .project-img {
+        width: 80%;
+        height: auto;
+        min-width: unset;
+        min-height: unset;
+      }
+      .border-img {
+        .border-join {
+          width: 80%;
+          height: 75%;
+          top: -10px;
+          left: -10px;
+        }
+        .circle-arrow-down {
+          transform: translate(-180%, 100%) rotate(0deg);
+        }
+        .circle-arrow-top-right {
+          transform: translate(-180%, 100%) rotate(105deg);
+        }
+      }
+    }
+
+    .details-join {
+      transform: translate(5%, 40%);
+      width: 80%;
+      h4 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      span {
+        font-size: 18px;
+        line-height: 18px;
+        width: 80%;
+      }
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &:hover {
+      .details-join {
+        transform: translate(5%, 90%) !important;
+      }
+      .border-img .circle-arrow-down {
+        transform: translate(-180%, 100%) rotate(-40deg) !important;
+      }
+      .border-img .circle-arrow-top-right {
+        transform: translate(-180%, 100%) rotate(0deg) !important;
+      }
+    }
+  }
+
+  .el-pollo-loco {
+    .img-pollo {
+      justify-content: flex-end;
+      margin-right: 24px;
+      width: 100%;
+      .project-img {
+        width: 80%;
+        height: auto;
+        min-width: unset;
+        min-height: unset;
+      }
+      .border-img {
+        .border-pollo {
+          width: 80%;
+          height: 75%;
+          top: 20px;
+          right: -10px;
+          left: unset;
+        }
+        .circle-arrow-down {
+          transform: translate(180%, 180%) rotate(0deg);
+        }
+        .circle-arrow-top-right {
+          transform: translate(180%, 180%) rotate(105deg);
+        }
+      }
+    }
+
+    .details-pollo {
+      transform: translate(5%, 40%);
+      width: 80%;
+      h4 {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      span {
+        font-size: 18px;
+        line-height: 18px;
+        width: 80%;
+      }
+      p {
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+
+    &:hover {
+      .details-pollo {
+        transform: translate(20%, 105%) !important;
+      }
+      .border-img .circle-arrow-down {
+        transform: translate(180%, 180%) rotate(-40deg) !important;
+      }
+      .border-img .circle-arrow-top-right {
+        transform: translate(180%, 180%) rotate(0deg) !important;
       }
     }
   }

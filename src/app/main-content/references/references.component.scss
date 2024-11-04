@@ -142,3 +142,13 @@
         }
     }
 }
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 30px !important;
+    }
+
+    p{
+        width: 80% !important;
+    }
+}

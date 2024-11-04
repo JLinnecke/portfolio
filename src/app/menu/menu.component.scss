@@ -23,7 +23,7 @@
   }
 
   h2::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
     left: -30px; /* Positioniert das Pseudo-Element am linken Rand */
@@ -33,7 +33,7 @@
   }
 
   h2::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
     left: -30px; /* Positioniert das Pseudo-Element am linken Rand */
@@ -62,28 +62,28 @@
   z-index: 1;
   overflow-x: hidden;
   &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black; // Gleiche Hintergrundfarbe wie der Container
-      clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%); // Diagonale Form
-      z-index: -1; // Hinter den Inhalt legen
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; // Gleiche Hintergrundfarbe wie der Container
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%); // Diagonale Form
+    z-index: -1; // Hinter den Inhalt legen
   }
   h3 {
-   font-family: syne;
-   font-size: 78px;
-   line-height: 78px;
-   font-weight: 800;
-   margin-left: 104px;
-   margin-bottom: 32px;
-   color: white;
-   z-index: 1;
-   &:hover {
-       color: #00BC8F;
-   }
+    font-family: syne;
+    font-size: 78px;
+    line-height: 78px;
+    font-weight: 800;
+    margin-left: 104px;
+    margin-bottom: 32px;
+    color: white;
+    z-index: 1;
+    &:hover {
+      color: #00bc8f;
+    }
   }
 }
 
@@ -128,3 +128,105 @@
     }
   }
 }
+
+@media (max-width: 1260px) {
+  .menu {
+    margin-top: -64px;
+    h2 {
+      font-size: 64px;
+      line-height: 64px;
+      // width: 50%;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .contact {
+    h3 {
+      font-size: 48px;
+      line-height: 48px;
+      margin-left: 32px;
+    }
+    .mail {
+      a {
+        font-size: 16px;
+        line-height: 16px;
+        margin-left: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 570px) {
+  .menu {
+    h2 {
+      font-size: 48px;
+      line-height: 48px;
+      margin-top: 64px;
+    }
+  }
+  .contact {
+    h3 {
+      font-size: 32px;
+      line-height: 32px;
+      margin-left: 16px;
+      margin-bottom: 16px;
+    }
+    .mail-icons {
+      margin-bottom: 16px;
+      .mail {
+        a {
+          font-size: 12px;
+          line-height: 12px;
+          margin-left: 16px;
+        }
+      }
+      .icons {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .contact {
+    .mail-icons {
+      .icons {
+        display: none;
+      }
+    }
+  }
+}
+
+// @media (max-width: 380px) {
+//   .menu {
+//     h2 {
+//       font-size: 32px;
+//       line-height: 32px;
+//     }
+//   }
+//   .contact {
+//     h3 {
+//       font-size: 24px;
+//       line-height: 24px;
+//       margin-left: 8px;
+//       margin-bottom: 8px;
+//     }
+//     .mail-icons {
+//       margin-bottom: 8px;
+//       .mail {
+//         a {
+//           font-size: 10px;
+//           line-height: 10px;
+//           margin-left: 8px;
+//         }
+//       }
+//       .icons {
+//         margin-right: 8px;
+//       }
+//     }
+//   }
+// }

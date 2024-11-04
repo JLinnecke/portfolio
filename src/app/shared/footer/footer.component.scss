@@ -26,3 +26,23 @@
         color: #FFFcF3;
     }
 }
+
+@media (max-width: 1280px) {
+    .legal-notice {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .legal-notice {
+        justify-content: center;
+        align-items: center;
+        margin-right: unset;
+    }
+}
