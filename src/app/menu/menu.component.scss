@@ -7,9 +7,21 @@
   max-width: 1240px;
   height: 92px;
   margin: 0 auto;
+  margin-top: -20px;
+
   a {
     text-decoration: none;
     color: black;
+  }
+
+  .menu-links {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link-container {
+    position: relative; /* Setzt den Container in den relativen Modus */
   }
 
   h2 {
@@ -17,42 +29,50 @@
     line-height: 96px;
     font-weight: 700;
     font-family: syne;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 50%;
     color: #000000;
     margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
     position: relative; /* Setzt das h2-Element in den relativen Modus */
+    z-index: 1; /* Stellt sicher, dass das h2-Element über dem Animationselement liegt */
   }
 
-  h2::after {
-    content: "";
+  .animation-container {
     position: absolute;
-    bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
-    left: 30px; /* Positioniert das Pseudo-Element am linken Rand */
-    width: 10%; /* Legt die Breite des Pseudo-Elements fest */
+    top: 83%;
+    left: 0; /* Positioniert den Container am linken Rand */
+    width: 100%; /* Legt die Breite des Containers fest */
+    height: 50px; /* Legt die Höhe des Containers fest */
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .animation-line {
+    position: absolute;
+    bottom: 0;
+    left: 0; /* Positioniert das Pseudo-Element relativ zur Breite des Containers */
+    width: 7%; /* Legt die Breite des Pseudo-Elements relativ zur Breite des Containers fest */
     border-bottom: 4px solid #000000; /* Fügt den unteren Border hinzu */
     transition: left 0.3s ease, width 0.3s ease; /* Übergangseffekt für die Position und Breite */
   }
 
-  h2::before {
-    content: "";
+  .animation-bar {
     position: absolute;
-    bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
-    left: 30px; /* Positioniert das Pseudo-Element am linken Rand */
-    height: 50%; /* Legt die Höhe des Pseudo-Elements fest */
+    bottom: 0;
+    left: 0; /* Positioniert das Pseudo-Element relativ zur Breite des Containers */
+    height: 100%; /* Legt die Höhe des Pseudo-Elements fest */
     border-left: 4px solid #000000; /* Fügt den linken Border hinzu */
     transition: opacity 0.3s ease; /* Übergangseffekt für die Sichtbarkeit */
   }
 
-  h2:hover::before {
+  h2:hover + .animation-container .animation-bar {
     opacity: 0; /* Blendet das Pseudo-Element aus */
   }
 
-  h2:hover::after {
-    left: calc(100% - 300px); /* Positioniert das Pseudo-Element ganz rechts */
-    width: 40%; /* Reduziert die Breite des Pseudo-Elements */
+  h2:hover + .animation-container .animation-line {
+    left: calc(100% - 20%); /* Positioniert das Pseudo-Element ganz rechts */
+    width: 40%; /* Vergrößert die Breite des Pseudo-Elements */
   }
 }
 
@@ -135,34 +155,32 @@
 
 @media (max-width: 1260px) {
   .menu {
-    margin-top: -64px;
+    margin-top: -152px;
     h2 {
-      font-size: 64px;
-      line-height: 64px;
+      font-size: 80px;
+      line-height: 80px;
+      width: 100%;
     }
-    h2::after {
-      content: "";
-      position: absolute;
-      bottom: -20px; /* Positioniert das Pseudo-Element am unteren Rand */
-      left: 120px; /* Positioniert das Pseudo-Element am linken Rand */
-      width: 10%; /* Legt die Breite des Pseudo-Elements fest */
-      border-bottom: 4px solid #000000; /* Fügt den unteren Border hinzu */
-      transition: left 0.3s ease, width 0.3s ease; /* Übergangseffekt für die Position und Breite */
-    }
-  
-    h2::before {
-      content: "";
-      position: absolute;
-      bottom: -20px; /* Positioniert das Pseudo-Element am unteren Rand */
-      left: 120px; /* Positioniert das Pseudo-Element am linken Rand */
-      height: 50%; /* Legt die Höhe des Pseudo-Elements fest */
-      border-left: 4px solid #000000; /* Fügt den linken Border hinzu */
-      transition: opacity 0.3s ease; /* Übergangseffekt für die Sichtbarkeit */
+    .animation-container {
+      height: 40px;
+      left: 0%; /* Positioniert den Container in der Mitte */
     }
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 930px) {
+  .menu {
+    margin-top: -120px;
+    h2 {
+      font-size: 72px;
+      line-height: 80px;
+      width: 100%;
+    }
+    .animation-container {
+      height: 30px;
+      left: 0%; /* Positioniert den Container in der Mitte */
+    }
+  }
   .contact {
     h3 {
       font-size: 48px;
@@ -179,16 +197,17 @@
   }
 }
 
-@media (max-width: 570px) {
+@media (max-width: 840px) {
   .menu {
+    margin-top: -96px;
     h2 {
-      font-size: 48px;
-      line-height: 48px;
+      font-size: 64px;
+      line-height: 64px;
       margin-top: 64px;
     }
-    h2:hover::after {
-      left: calc(100% - 100px); /* Positioniert das Pseudo-Element ganz rechts */
-      width: 40%; /* Reduziert die Breite des Pseudo-Elements */
+    .animation-container {
+      height: 25px;
+      left: 0%; /* Positioniert den Container in der Mitte */
     }
   }
   .contact {
@@ -214,11 +233,12 @@
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 740px) {
   .menu {
+    margin-top: -72px;
     h2 {
-      font-size: 32px;
-      line-height: 32px;
+      font-size: 48px;
+      line-height: 48px;
       width: 100%;
       justify-content: center;
       align-items: center;
@@ -227,6 +247,22 @@
   }
 }
 
+@media (max-width: 600px) {
+  .menu {
+    margin-top: -48px;
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .animation-container {
+      height: 20px;
+    }
+  }
+}
 @media (max-width: 470px) {
   .contact {
     .mail-icons {
@@ -237,4 +273,37 @@
   }
 }
 
+@media (max-width: 385px) {
+  .menu {
+    margin-top: -32px;
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .animation-container {
+      height: 15px;
+      left: -10%; /* Positioniert den Container in der Mitte */
+    }
+  }
+}
 
+@media (max-width: 350px) {
+  .menu {
+    margin-top: -24px;
+    h2 {
+      font-size: 24px;
+      line-height: 24px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+    .animation-container {
+      left: -10%; /* Positioniert den Container in der Mitte */
+    }
+  }
+}
