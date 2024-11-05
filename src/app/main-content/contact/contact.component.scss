@@ -1,522 +1,527 @@
 .contact {
-    width: 100%;
-    position: relative; // Für die Positionierung des Pseudo-Elements
-    overflow: hidden; // Verhindert, dass der Inhalt über den Container hinausgeht
+  width: 100%;
+  position: relative; // Für die Positionierung des Pseudo-Elements
+  overflow: hidden; // Verhindert, dass der Inhalt über den Container hinausgeht
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: black; // Gleiche Hintergrundfarbe wie der Container
-        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); // Diagonale Form
-        z-index: -1; // Hinter den Inhalt legen
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; // Gleiche Hintergrundfarbe wie der Container
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); // Diagonale Form
+    z-index: -1; // Hinter den Inhalt legen
+  }
 }
 
 .contact-section {
-    width: 1240px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    h2 {
-        font-family: syne;
-        font-size: 78px;
-        line-height: 78px;
-        text-align: left;
-        color: #fffcf3;
-        margin-top: 152px;
-        margin-bottom: 52px;
-        &:hover {
-            color: #00Bc8F;
-        }
+  width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  h2 {
+    font-family: syne;
+    font-size: 78px;
+    line-height: 78px;
+    text-align: left;
+    color: #fffcf3;
+    margin-top: 152px;
+    margin-bottom: 52px;
+    &:hover {
+      color: #00bc8f;
     }
+  }
 }
 
 .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #fffcf3;
-    h4 {
-        font-family: overpass;
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 38px;
-        text-align: center;
-        color: #00Bc8F;
-        margin: 0;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fffcf3;
+  h4 {
+    font-family: overpass;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    color: #00bc8f;
+    margin: 0;
+  }
 
-    p {
-        font-family: overpass;
-        font-size: 22px;
-        line-height: 26px;
-        text-align: center;
-        color: #fffcf3;
-    }
+  p {
+    font-family: overpass;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #fffcf3;
+  }
 }
 
 .form-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  form {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
-    max-width: 1240px;
-    form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+
+    .input-container {
+      position: relative;
       width: 100%;
-  
-      .input-container {
+      max-width: 617px;
+      margin: 10px 0;
+
+      input,
+      textarea {
         position: relative;
         width: 100%;
-        max-width: 617px;
-        margin: 10px 0;
-      
-        input,
-        textarea {
-          width: 100%;
-          padding-right: 40px; // Platz für das Symbol
-          height: 50px;
-          padding: 10px;
-          border: none;
-          border-bottom: 2px solid grey;
-          font-family: overpass;
-          font-size: 16px;
-          color: #333;
-          background-color: transparent;
-      
-          &:hover {
-            border: 2px solid #fffcf3;
-          }
+        padding-right: 40px; // Platz für das Symbol
+        height: 50px;
+        padding: 10px;
+        border: none;
+        border-bottom: 2px solid grey;
+        font-family: overpass;
+        font-size: 16px;
+        color: #333;
+        background-color: transparent;
+
+        &:hover {
+          border: 2px solid #fffcf3;
         }
-      
-        textarea {
-          height: 100px;
-        }
-      
-        .validation-icon-container {
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 30px;
-          height: 30px;
-        }
-      
-        .validation-icon {
-          position: absolute;
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-          display: none; // Standardmäßig unsichtbar
-          justify-content: center;
-          align-items: center;
-          font-size: 16px; // Konsistente Schriftgröße
-          line-height: 1; // Konsistente Zeilenhöhe
-          color: white;
-        }
-      
-        .validation-icon.invalid {
-          background-color: red;
-        }
-      
-        .validation-icon.valid {
-          background-color: green;
-        }
-      
-        .error-message {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          color: red;
-          font-size: 14px;
-          font-family: overpass;
-          gap: 8px;
-        }
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      .validation-error,
+      .validation-success {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 20px; /* Breite des Kreises */
+        height: 20px; /* Höhe des Kreises */
+        border-radius: 50%; /* Macht das Element rund */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px; /* Größe des Symbols */
+        line-height: 20px; /* Vertikale Zentrierung des Symbols */
+      }
+
+      .validation-error-input,
+      .validation-success-input {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+        width: 20px; /* Breite des Kreises */
+        height: 20px; /* Höhe des Kreises */
+        border-radius: 50%; /* Macht das Element rund */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px; /* Größe des Symbols */
+        line-height: 20px; /* Vertikale Zentrierung des Symbols */
+      }
+
+      .validation-error {
+        background-color: red; /* Hintergrundfarbe des Kreises */
+        color: black; /* Farbe des Ausrufezeichens */
+      }
+
+      .validation-success {
+        background-color: green; /* Hintergrundfarbe des Kreises */
+        color: black; /* Farbe des Häkchens */
+      }
+
+      .validation-error-input {
+        background-color: red; /* Hintergrundfarbe des Kreises */
+        color: black; /* Farbe des Ausrufezeichens */
+      }
+
+      .validation-success-input {
+        background-color: green; /* Hintergrundfarbe des Kreises */
+        color: black; /* Farbe des Häkchens */
       }
     }
   }
+}
 
 .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+  gap: 7px;
+  margin-bottom: 64px;
+
+  div {
+    width: 32px;
+    height: 32px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-top: 10px;
-    gap: 7px;
-    margin-bottom: 64px;
+    align-items: center;
+    &:hover {
+      background-color: #00bc8f;
+      border-radius: 100%;
+    }
+  }
 
-    div {
-        width: 32px;
-        height: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:hover {
-            background-color: #00Bc8F;
-            border-radius: 100%;
-        }
-    }
+  input[type="checkbox"] {
+    appearance: none;
+    border: 2px solid white !important;
+    width: 18px !important;
+    height: 18px !important;
+    background-color: transparent;
+    z-index: 1;
+    position: relative;
 
-    input[type="checkbox"] {
-        appearance: none;
-        border: 2px solid white !important;
-        width: 18px !important;
-        height: 18px !important;
-        background-color: transparent;
-        z-index: 1;
-        position: relative;
+    &:checked::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 6px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+  }
+  label {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: overpass;
+    font-size: 14px;
+    height: 27px;
+    color: #333;
+    a {
+      
+      width: 100px;
+      color: #00bc8f;
+      text-decoration: none;
+      transition: font-weight 0.3s ease; // Übergangseffekt für die Schriftstärkeänderung
+    }
+  }
+  &:hover div {
+    background-color: #00bc8f;
+    border-radius: 100%;
+  }
 
-        &:checked::after {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 6px;
-            width: 5px;
-            height: 10px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-        }
-    }
-    label {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        font-family: overpass;
-        font-size: 14px;
-        height: 27px;
-        color: #333;
-        a {
-            margin-left: 5px;
-            margin-right: 5px;
-            width: 100px;
-            color: #00Bc8F;
-            text-decoration: none;
-            transition: font-weight 0.3s ease; // Übergangseffekt für die Schriftstärkeänderung
-        }
-    }
-    &:hover div {
-        background-color: #00Bc8F;
-        border-radius: 100%;
-    }
-
-    &:hover a {
-        font-size: 16px;
-        font-weight: 400;
-    }
+  &:hover a {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 .submit {
+  display: flex;
+  justify-content: center; /* Zentriert den Button horizontal */
+  align-items: center; /* Zentriert den Button vertikal */
+  position: relative; /* Setzt den Container in den relativen Modus */
+  padding: 20px; /* Fügt Padding hinzu, um Platz innerhalb des Containers zu schaffen */
+  width: 100%;
+
+  button {
     display: flex;
-    justify-content: center; /* Zentriert den Button horizontal */
-    align-items: center; /* Zentriert den Button vertikal */
-    position: relative; /* Setzt den Container in den relativen Modus */
-    padding: 20px; /* Fügt Padding hinzu, um Platz innerhalb des Containers zu schaffen */
-    width: 100%;
-  
-    button {
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 68px;
+    padding: 20px 60px;
+    background-color: transparent;
+    color: #5d5d5d;
+    border: 4px solid #5d5d5d;
+    font-family: overpass;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 34px;
+  }
+
+  .scroll-up {
+    position: absolute; /* Setzt den Container in den absoluten Modus */
+    right: 20px; /* Positioniert den Container 20px vom rechten Rand entfernt */
+    top: 45%; /* Zentriert den Container vertikal */
+    transform: translateY(-50%); /* Korrigiert die vertikale Positionierung */
+
+    a {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 280px;
-      height: 68px;
-      padding: 20px 60px;
-      background-color: transparent;
-      color: #5d5d5d;
-      border: 4px solid #5d5d5d;
-      font-family: overpass;
-      font-size: 23px;
-      text-align: center;
-      cursor: pointer;
-      margin-bottom: 34px;
     }
-  
-    .scroll-up {
-      position: absolute; /* Setzt den Container in den absoluten Modus */
-      right: 20px; /* Positioniert den Container 20px vom rechten Rand entfernt */
-      top: 45%; /* Zentriert den Container vertikal */
-      transform: translateY(-50%); /* Korrigiert die vertikale Positionierung */
-  
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+    img {
+      transition: transform 0.3s ease; /* Übergangseffekt für die Transformation */
+      transform-origin: bottom; /* Ursprung der Transformation auf die untere Kante setzen */
+
+      &:hover {
+        transform: scale(1, 1.7); /* Bild in Höhe und Breite strecken */
       }
-  
+    }
+  }
+}
+
+.logo-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1240px;
+
+  .logo-user {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+
+    span {
+      font-family: overpass;
+      color: white;
+    }
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 47px; // Abstand zwischen den Bildern
+
+    a {
+      display: inline-block; // Ermöglicht die Anwendung von transform
+      transition: transform 0.3s ease; // Übergangseffekt für die Transformation
+
+      &:hover {
+        transform: translateY(-15px); // Bewegt das Element um 5 Pixel nach oben
+      }
+
       img {
-        transition: transform 0.3s ease; /* Übergangseffekt für die Transformation */
-        transform-origin: bottom; /* Ursprung der Transformation auf die untere Kante setzen */
-  
-        &:hover {
-          transform: scale(1.0, 1.7); /* Bild in Höhe und Breite strecken */
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .contact-section {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .form-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .form-input {
+    form {
+      .input-container {
+        max-width: 564px;
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .logo-icons {
+    width: 100%;
+    .logo-user {
+      margin-left: 32px;
+    }
+    .socials {
+      margin-right: 64px;
+    }
+  }
+
+  .scroll-up {
+    right: 80px !important;
+  }
+}
+
+@media (max-width: 830px) {
+  .contact-section {
+    h2 {
+      font-size: 78px;
+      line-height: 78px;
+    }
+  }
+
+  .form-container {
+    h4 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 2px;
+    }
+  }
+
+  .form-input {
+    form {
+      .input-container {
+        max-width: 400px;
+        input,
+        textarea {
+          height: 40px;
+          font-size: 14px;
         }
       }
     }
   }
 
-.logo-icons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1240px;
-    
-    .logo-user {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        flex-direction: column;
-    
-        img {
-            width: 60px;
-            height: 60px;
-        }
-    
-        span {
-            font-family: overpass;
-            color: white;
-        }
+  .checkbox-container {
+    label {
+      font-size: 14px;
+      font-weight: 400;
     }
+  }
 
-    .socials {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 47px; // Abstand zwischen den Bildern
-    
-        a {
-            display: inline-block; // Ermöglicht die Anwendung von transform
-            transition: transform 0.3s ease; // Übergangseffekt für die Transformation
-    
-            &:hover {
-                transform: translateY(-15px); // Bewegt das Element um 5 Pixel nach oben
-            }
-    
-            img {
-                width: 30px;
-                height: 30px;
-            }
-        }
+  .submit {
+    button {
+      width: 240px;
+      height: 58px;
+      padding: 20px 50px;
+      font-size: 20px;
     }
+  }
 }
-
-@media (max-width: 1280px) {
-    .contact-section {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .form-container {
-        width: 100%;
-        padding: 0 20px;
-    }
-
-    .form-input {
-        form {
-            .input-container {
-                max-width: 564px;
-                padding: 0 20px;
-            }
-        }
-    }
-
-    .logo-icons {
-        width: 100%;
-        .logo-user {
-            margin-left: 32px;
-        }
-        .socials {
-            margin-right: 64px;
-        }
-    }
-
-    .scroll-up {
-        right: 80px !important;
-    }
-}
-
-@media (max-width: 830px) {
-    .contact-section {
-        h2 {
-            font-size: 78px;
-            line-height: 78px;
-        }
-    }
-
-    .form-container {
-        h4 {
-            font-size: 28px;
-            line-height: 34px;
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 2px;
-        }
-    }
-
-    .form-input {
-        form {
-            .input-container {
-                max-width: 400px;
-                input,
-                textarea {
-                    height: 40px;
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-
-    .checkbox-container {
-        label {
-            font-size: 14px;
-            font-weight: 400;
-        }
-    }
-
-    .submit {
-        button {
-            width: 240px;
-            height: 58px;
-            padding: 20px 50px;
-            font-size: 20px;
-        }
-    }    
-}
-
 
 @media (max-width: 600px) {
-    .scroll-up {
-        display: none;
-    }
+  .scroll-up {
+    display: none;
+  }
 
-    .logo-icons {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        .logo-user {
-            margin-left: 0;
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .socials {
-            margin-right: 0;
-            margin-bottom: 28px;
-        }
+  .logo-icons {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    .logo-user {
+      margin-left: 0;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+    .socials {
+      margin-right: 0;
+      margin-bottom: 28px;
+    }
+  }
 
-    .checkbox-container {
-        label {
-            justify-content: flex-start;
-            height: auto; /* Ermöglicht dem Label, sich an den Inhalt anzupassen */
-            width: 70%; /* Stellt sicher, dass das Label die volle Breite einnimmt */
-        }
+  .checkbox-container {
+    label {
+      justify-content: flex-start;
+      height: auto; /* Ermöglicht dem Label, sich an den Inhalt anzupassen */
+      width: 70%; /* Stellt sicher, dass das Label die volle Breite einnimmt */
     }
+  }
 }
 
 @media (max-width: 550px) {
-    .contact-section {
-        padding: unset;
-        h2 {
-            padding: 0 30px;
-            font-size: 45px;
-            line-height: 45px;
-        }
+  .contact-section {
+    padding: unset;
+    h2 {
+      padding: 0 30px;
+      font-size: 45px;
+      line-height: 45px;
     }
-    
+  }
 
-    .form-container {
-        padding: unset;
-        h4 {
-            font-size: 24px;
-            line-height: 30px;
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 24px;
-        }
-    }
-    .form-input {
-        form {
-            .input-container {
-                max-width: 300px;
-            }
-        }
+  .form-container {
+    padding: unset;
+    h4 {
+      font-size: 24px;
+      line-height: 30px;
     }
 
-    .checkbox-container {
-        label {
-            font-size: 10px;
-        }
+    p {
+      font-size: 20px;
+      line-height: 24px;
     }
+  }
+  .form-input {
+    form {
+      .input-container {
+        max-width: 300px;
+      }
+    }
+  }
+
+  .checkbox-container {
+    label {
+      font-size: 10px;
+    }
+  }
 }
 
 @media (max-width: 400px) {
-    .contact-section {
-        h2 {
-            font-size: 45px;
-            line-height: 45px;
-        }
+  .contact-section {
+    h2 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+  }
+
+  .form-container {
+    h4 {
+      font-size: 20px;
+      line-height: 24px;
     }
 
-    .form-container {
-        h4 {
-            font-size: 20px;
-            line-height: 24px;
-        }
-
-        p {
-            font-size: 20px;
-            line-height: 24px;
-        }
+    p {
+      font-size: 20px;
+      line-height: 24px;
     }
+  }
 
-    .form-input {
-        form {
-            .input-container {
-                max-width: 250px;
-                input,
-                textarea {
-                    height: 30px;
-                    font-size: 12px;
-                }
-            }
+  .form-input {
+    form {
+      .input-container {
+        max-width: 250px;
+        input,
+        textarea {
+          height: 30px;
+          font-size: 12px;
         }
+      }
     }
+  }
 
-    .checkbox-container {
-        label {
-            font-size: 14px;
-            font-weight: 400;
-            align-items: flex-start;
-            justify-content: flex-start;
-        }
+  .checkbox-container {
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      align-items: flex-start;
+      justify-content: flex-start;
     }
+  }
 
-    .submit {
-        button {
-            width: 200px;
-            height: 48px;
-            padding: 20px 40px;
-            font-size: 18px;
-        }
+  .submit {
+    button {
+      width: 200px;
+      height: 48px;
+      padding: 20px 40px;
+      font-size: 18px;
     }
+  }
 }

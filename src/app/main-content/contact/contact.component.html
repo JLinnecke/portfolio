@@ -5,78 +5,45 @@
       <h4>Want to discuss a new project?</h4>
       <p>Say hello! let's discuss your ideas and make it happen</p>
       <div class="form-input">
-        <form [formGroup]="contactForm">
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+
           <div class="input-container">
-            <input
-              type="text"
-              placeholder="Your name"
-              formControlName="name"
-              required
-            />
-            <div class="validation-icon-container">
-              <span
-                class="validation-icon invalid"
-                style="margin-bottom: 9px"
-                #nameInvalidIcon
-                >!</span
-              >
-              <!-- immer noch im test -->
-              <span class="validation-icon valid" #nameValidIcon>✔</span>
-            </div>
-            <div *ngIf="isInvalid('name')" class="error-message">
-              <div
-                *ngIf="name?.errors?.['required'] || name?.errors?.['minLength'] || name?.errors?.['lettersOnly']"
-              >
-                Name is required, must be at least 3 characters long, and
-                contain only letters.
-              </div>
+            <input #name="ngModel" minlength="3" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="Your name" required/>
+            <span *ngIf="!name.valid && name.touched && !name.disabled" class="validation-error-input">!</span>
+            <span *ngIf="name.valid && name.touched && !name.disabled" class="validation-success-input">✔</span>
+            <div *ngIf="!name.valid && name.touched && !name.disabled">
+              <span style="color: red; font-family: overpass;">Your email is required</span>
             </div>
           </div>
+
+
+
           <div class="input-container">
-            <input
-              type="email"
-              placeholder="Your email"
-              formControlName="email"
-              required
-            />
-            <div class="validation-icon-container">
-              <span class="validation-icon invalid" #emailInvalidIcon>!</span>
-              <span class="validation-icon valid" #emailValidIcon>✔</span>
-            </div>
-            <div *ngIf="isInvalid('email')" class="error-message">
-              <div
-                *ngIf="email?.errors?.['required'] || email?.errors?.['email'] || email?.errors?.['emailDomain']"
-              >
-                Email is required, must be valid adress and end with .de .com or
-                .net.
-              </div>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required/>
+            <span *ngIf="!email.valid && email.touched && !email.disabled" class="validation-error-input">!</span>
+            <span *ngIf="email.valid && email.touched && !email.disabled" class="validation-success-input">✔</span>
+            <div *ngIf="!email.valid && email.touched && !email.disabled">
+              <span style="color: red; font-family: overpass;">Your email is required</span>
             </div>
           </div>
+
+
+
           <div class="input-container">
-            <textarea
-              placeholder="Your message"
-              formControlName="message"
-              required
-            ></textarea>
-            <div class="validation-icon-container">
-              <span class="validation-icon invalid" #messageInvalidIcon>!</span>
-              <span class="validation-icon valid" #messageValidIcon>✔</span>
-            </div>
-            <div *ngIf="isInvalid('message')" class="error-message">
-              <div *ngIf="message?.errors?.['required']">
-                Your Message is empty.
-              </div>
+            <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="Your message" required></textarea>
+            <span *ngIf="!message.valid && message.touched && !message.disabled" class="validation-error">!</span>
+            <span *ngIf="message.valid && message.touched && !message.disabled" class="validation-success">✔</span>
+            <div *ngIf="!message.valid && message.touched && !message.disabled">
+              <span style="color: red; font-family: overpass;">Your message is empty</span>
             </div>
           </div>
           <div class="checkbox-container">
-            <div><input type="checkbox" id="subscribe" name="subscribe" /></div>
-            <label for="subscribe"
-              >I've read the <a href="#">privacy policy</a> and agree to the
-              processing of my data as outlined.</label
-            >
+            <div><input type="checkbox" id="subscribe" name="subscribe" required/></div>
+            <label for="subscribe">I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.</label>
           </div>
           <div class="submit">
-            <button type="submit" disabled>Send message</button>
+            <button type="submit" value="submit" >Send message</button>
             <div class="scroll-up">
               <a href="#landingpage">
                 <img src="assets/img/arrow-up.png" alt="scroll-up" />
@@ -85,7 +52,6 @@
           </div>
         </form>
       </div>
-      
       <div class="logo-icons">
         <div class="logo-user">
           <a href="#landingpage"><img src="assets/footer/logo-footer.png" alt="logo-footer"></a> 

@@ -17,6 +17,10 @@
     line-height: 96px;
     font-weight: 700;
     font-family: syne;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 50%;
     color: #000000;
     margin-bottom: 16px;
     position: relative; /* Setzt das h2-Element in den relativen Modus */
@@ -26,7 +30,7 @@
     content: "";
     position: absolute;
     bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
-    left: -30px; /* Positioniert das Pseudo-Element am linken Rand */
+    left: 30px; /* Positioniert das Pseudo-Element am linken Rand */
     width: 10%; /* Legt die Breite des Pseudo-Elements fest */
     border-bottom: 4px solid #000000; /* Fügt den unteren Border hinzu */
     transition: left 0.3s ease, width 0.3s ease; /* Übergangseffekt für die Position und Breite */
@@ -36,7 +40,7 @@
     content: "";
     position: absolute;
     bottom: -35px; /* Positioniert das Pseudo-Element am unteren Rand */
-    left: -30px; /* Positioniert das Pseudo-Element am linken Rand */
+    left: 30px; /* Positioniert das Pseudo-Element am linken Rand */
     height: 50%; /* Legt die Höhe des Pseudo-Elements fest */
     border-left: 4px solid #000000; /* Fügt den linken Border hinzu */
     transition: opacity 0.3s ease; /* Übergangseffekt für die Sichtbarkeit */
@@ -47,7 +51,7 @@
   }
 
   h2:hover::after {
-    left: calc(100% - 150px); /* Positioniert das Pseudo-Element ganz rechts */
+    left: calc(100% - 300px); /* Positioniert das Pseudo-Element ganz rechts */
     width: 40%; /* Reduziert die Breite des Pseudo-Elements */
   }
 }
@@ -135,10 +139,25 @@
     h2 {
       font-size: 64px;
       line-height: 64px;
-      // width: 50%;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
+    }
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -20px; /* Positioniert das Pseudo-Element am unteren Rand */
+      left: 120px; /* Positioniert das Pseudo-Element am linken Rand */
+      width: 10%; /* Legt die Breite des Pseudo-Elements fest */
+      border-bottom: 4px solid #000000; /* Fügt den unteren Border hinzu */
+      transition: left 0.3s ease, width 0.3s ease; /* Übergangseffekt für die Position und Breite */
+    }
+  
+    h2::before {
+      content: "";
+      position: absolute;
+      bottom: -20px; /* Positioniert das Pseudo-Element am unteren Rand */
+      left: 120px; /* Positioniert das Pseudo-Element am linken Rand */
+      height: 50%; /* Legt die Höhe des Pseudo-Elements fest */
+      border-left: 4px solid #000000; /* Fügt den linken Border hinzu */
+      transition: opacity 0.3s ease; /* Übergangseffekt für die Sichtbarkeit */
     }
   }
 }
@@ -167,6 +186,10 @@
       line-height: 48px;
       margin-top: 64px;
     }
+    h2:hover::after {
+      left: calc(100% - 100px); /* Positioniert das Pseudo-Element ganz rechts */
+      width: 40%; /* Reduziert die Breite des Pseudo-Elements */
+    }
   }
   .contact {
     h3 {
@@ -191,6 +214,19 @@
   }
 }
 
+@media (max-width: 520px) {
+  .menu {
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+    }
+  }
+}
+
 @media (max-width: 470px) {
   .contact {
     .mail-icons {
@@ -201,32 +237,4 @@
   }
 }
 
-// @media (max-width: 380px) {
-//   .menu {
-//     h2 {
-//       font-size: 32px;
-//       line-height: 32px;
-//     }
-//   }
-//   .contact {
-//     h3 {
-//       font-size: 24px;
-//       line-height: 24px;
-//       margin-left: 8px;
-//       margin-bottom: 8px;
-//     }
-//     .mail-icons {
-//       margin-bottom: 8px;
-//       .mail {
-//         a {
-//           font-size: 10px;
-//           line-height: 10px;
-//           margin-left: 8px;
-//         }
-//       }
-//       .icons {
-//         margin-right: 8px;
-//       }
-//     }
-//   }
-// }
+

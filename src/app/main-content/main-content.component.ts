@@ -20,8 +20,6 @@ import { ReferencesComponent } from './references/references.component';
     ContactComponent
   ],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  styleUrls: ['./main-content.component.scss']
 })
-export class MainContentComponent {
-
-}
+export class MainContentComponent {}
