@@ -70,7 +70,7 @@
         max-width: 620px;
         max-height: 339px;
         height: 100%;
-        pointer-events: none;
+        
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
       }
@@ -170,6 +170,7 @@
 
   &:hover .img-join .border-img .border-join {
     opacity: 1;
+    cursor: pointer;
   }
 
   &:hover .img-join .border-img .circle-arrow-down {
@@ -227,7 +228,6 @@
         max-width: 620px;
         max-height: 339px;
         height: 100%;
-        pointer-events: none;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
       }
@@ -327,6 +327,7 @@
 
   &:hover .img-pollo .border-img .border-pollo {
     opacity: 1;
+    cursor: pointer;
   }
 
   &:hover .img-pollo .border-img .circle-arrow-down {
