@@ -22,7 +22,7 @@ export class ContactComponent {
     message: "",
   };
 
-  emailSent = false; // Variable to control the popup visibility
+  emailSent = false;
 
   mailTest = false; 
   post = {
@@ -56,17 +56,5 @@ export class ContactComponent {
 
   closePopup() {
     this.emailSent = false; // Hide the popup
-  }
-
-  showPopup() {
-    this.emailSent = true; // Show the popup for testing
-  }
-
-  closePopupOnOutsideClick(event: MouseEvent) {
-    const target = event.target as HTMLElement;
-    if (target.classList.contains('popup')) {
-      console.log('click outside');
-      this.closePopup();
-    }
   }
 }
