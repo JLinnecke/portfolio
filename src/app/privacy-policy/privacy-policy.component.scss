@@ -36,6 +36,31 @@
     }
 }
 
+.bottom {
+    position: relative; // Verwendet relative Positionierung
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    z-index: 1;
+    overflow-x: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      clip-path: polygon(0 0, 0 0, 100% 18%, 100% 100%, 0 100%);
+      z-index: -1;
+    }
+  }
+
 @media (max-width: 850px) {
     .privacy {
         padding: 24px;
