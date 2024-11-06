@@ -2,17 +2,23 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, FooterComponent, RouterModule],
+  imports: [CommonModule, FormsModule, FooterComponent, RouterModule, TranslateModule, HttpClientModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  constructor(private translate: TranslateService) {
+    this.translate.addLangs(['de', 'en']);
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
   http = inject(HttpClient);
 

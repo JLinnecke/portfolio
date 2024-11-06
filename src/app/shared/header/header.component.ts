@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -18,9 +19,12 @@ export class HeaderComponent {
     'assets/header_imgs/trans2.png',
     'assets/header_imgs/trans3.png',
     'assets/header_imgs/close.png',
-  ]
+  ];
+  currentLanguage: string;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private translate: TranslateService) {
+    this.currentLanguage = this.translate.currentLang || 'en';
+  }
 
   toggleMenu() {
     if (this.isMenuOpen) {
@@ -52,5 +56,11 @@ export class HeaderComponent {
         }
       }
     }, 100); // Change image every 100ms
+  }
+
+  switchLanguage() {
+    const newLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
+    this.translate.use(newLanguage);
+    this.currentLanguage = newLanguage;
   }
 }

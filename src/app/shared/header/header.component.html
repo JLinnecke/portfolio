@@ -3,6 +3,9 @@
     <div class="header-logo">
       <a href="#landingpage"><img src="assets/header_imgs/logo2-min.png" alt="logo"></a>
     </div>
+    <div class="language">
+      <button (click)="switchLanguage()">{{ currentLanguage }}</button>
+    </div>
     <div class="header-burger-menu">
       <button (click)="toggleMenu()"><img [src]="images[currentImageIndex]" alt="burger-menu"></button>
     </div>

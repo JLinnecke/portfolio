@@ -1,0 +1,28 @@
+{
+    "ABOUT_ME": "About me",
+    "BASED_IN": "Based in Bad Bodenteich",
+    "OPEN_TO_WORK": "Open to work Remote",
+    "LETS_TALK": "Let's talk",
+    "INTRODUCE_MYSELF" : "I am a Front-end developer from Bad Bodenteich, Germany. I help designers and companies to bring their ideas to real life. Creativity and logical thinking are skills that I have developed to connect ideas into quality products.",
+    "GOOD_MATCH" : "If you think I'd be a good match for your projects, contact me!",
+    
+    "CONTACT_ME" : "Contact me",
+    "DONT_SEE" : "Don't see the skill you need?",
+    "READY_LEARN" : "I'm always ready to learn!",
+
+    "EXPLORE": "Explore here a selection of my works - Interact with the projects to see my skills in action.",
+    "JOIN" : "A task manager inspired by the Kanban system. Create and organize tasks by drag-and-drop, assign users and categories.",
+    "POLLO" : "A short jump-and-run game based on JavaScript, developed following the principles of object-oriented programming.",
+
+    "WORK" : "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me",
+    "REF_1" : "Johannes is a great team player. He is always willing to help out and is a great problem solver.",
+
+    "DISCUSS" : "Want to discuss a new project?",
+    "SAY_HELLO" : "Say hello! let's discuss your ideas and make it happen.",
+    "PRIVACY_1" :"I've read the",
+    "PRIVACY_2" :"privacy policy",
+    "PRIVACY_3" :"and agree to the processing of my data as outlined.",
+
+    "IMPRINT": "Imprint",
+    "CONTACT_IMPRINT": "Contact"
+  }
