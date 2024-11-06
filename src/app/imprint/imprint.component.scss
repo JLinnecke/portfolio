@@ -1,0 +1,99 @@
+.imprint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+        font-family: syne;
+        font-size: 72px;
+        font-weight: 800;
+    }
+
+    p {
+        font-family: overpass;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-family: syne;
+        font-size: 48px;
+        font-weight: 800;
+    }
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100vw;
+    height: 150px;
+    margin: 0 auto;
+    z-index: 1;
+    overflow-x: hidden;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black; // Gleiche Hintergrundfarbe wie der Container
+        clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%); // Diagonale Form
+        z-index: -1; // Hinter den Inhalt legen
+      }
+}
+
+@media (max-width: 1260px) {
+    .imprint {
+        margin-top: -150px;
+    }
+}
+
+@media (max-width: 666px) {
+    .imprint {
+        margin-top: -100px;
+        h1 {
+            font-size: 48px;
+        }
+        p {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .imprint {
+        margin-top: -50px;
+        h1 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .imprint {
+        margin-top: -50px;
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    }
+}

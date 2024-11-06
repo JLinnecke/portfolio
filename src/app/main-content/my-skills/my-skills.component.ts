@@ -8,6 +8,4 @@ import { Component } from '@angular/core';
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
-export class MySkillsComponent {
-
-}
+export class MySkillsComponent {}

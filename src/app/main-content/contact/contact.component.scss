@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   h2 {
     font-family: syne;
     font-size: 78px;
@@ -30,6 +31,7 @@
     color: #fffcf3;
     margin-top: 152px;
     margin-bottom: 52px;
+
     &:hover {
       color: #00bc8f;
     }
@@ -42,6 +44,7 @@
   align-items: center;
   flex-direction: column;
   color: #fffcf3;
+
   h4 {
     font-family: overpass;
     font-weight: 700;
@@ -68,6 +71,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 1240px;
+
   form {
     display: flex;
     justify-content: center;
@@ -81,7 +85,8 @@
       max-width: 617px;
       margin: 10px 0;
 
-      input,
+      input[type="text"],
+      input[type="email"],
       textarea {
         position: relative;
         width: 100%;
@@ -98,6 +103,16 @@
         &:hover {
           border: 2px solid #fffcf3;
         }
+
+        &:focus {
+          outline: none; // Entfernt den Standardfokusrahmen
+          border-color: #fffcf3; // Setzt die Rahmenfarbe beim Fokus
+        }
+
+        &:not(:placeholder-shown) {
+          background-color: black; // Setzt die Hintergrundfarbe auf schwarz, wenn etwas hineingeschrieben wurde
+          color: white; // Optional: Setzt die Textfarbe auf weiß
+        }
       }
 
       textarea {
@@ -109,14 +124,14 @@
         position: absolute;
         right: 10px;
         top: 10px;
-        width: 20px; /* Breite des Kreises */
-        height: 20px; /* Höhe des Kreises */
-        border-radius: 50%; /* Macht das Element rund */
+        width: 20px;
+        height: 20px;       
+        border-radius: 50%;        
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 16px; /* Größe des Symbols */
-        line-height: 20px; /* Vertikale Zentrierung des Symbols */
+        font-size: 16px;
+        line-height: 20px;
       }
 
       .validation-error-input,
@@ -124,34 +139,34 @@
         position: absolute;
         right: 10px;
         top: 25px;
-        width: 20px; /* Breite des Kreises */
-        height: 20px; /* Höhe des Kreises */
-        border-radius: 50%; /* Macht das Element rund */
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 16px; /* Größe des Symbols */
-        line-height: 20px; /* Vertikale Zentrierung des Symbols */
+        font-size: 16px;
+        line-height: 20px;
       }
 
       .validation-error {
-        background-color: red; /* Hintergrundfarbe des Kreises */
-        color: black; /* Farbe des Ausrufezeichens */
+        background-color: red;
+        color: black;
       }
 
       .validation-success {
-        background-color: green; /* Hintergrundfarbe des Kreises */
-        color: black; /* Farbe des Häkchens */
+        background-color: green;
+        color: black;
       }
 
       .validation-error-input {
-        background-color: red; /* Hintergrundfarbe des Kreises */
-        color: black; /* Farbe des Ausrufezeichens */
+        background-color: red;
+        color: black;
       }
 
       .validation-success-input {
-        background-color: green; /* Hintergrundfarbe des Kreises */
-        color: black; /* Farbe des Häkchens */
+        background-color: green;
+        color: black;
       }
     }
   }
@@ -162,16 +177,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  position: relative;
   margin-top: 10px;
   gap: 7px;
-  margin-bottom: 64px;
 
-  div {
-    width: 32px;
+  .hover-checkbox {
     height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
+
     &:hover {
       background-color: #00bc8f;
       border-radius: 100%;
@@ -190,8 +205,8 @@
     &:checked::after {
       content: "";
       position: absolute;
-      top: 2px;
-      left: 6px;
+      top: 0;
+      left: 4px;
       width: 5px;
       height: 10px;
       border: solid white;
@@ -199,6 +214,7 @@
       transform: rotate(45deg);
     }
   }
+
   label {
     display: flex;
     flex-wrap: wrap;
@@ -209,30 +225,67 @@
     height: 27px;
     color: #333;
     a {
-      
       width: 100px;
       color: #00bc8f;
       text-decoration: none;
-      transition: font-weight 0.3s ease; // Übergangseffekt für die Schriftstärkeänderung
+      transition: font-weight 0.3s ease;
     }
   }
-  &:hover div {
+
+  &:hover .hover-checkbox {
     background-color: #00bc8f;
     border-radius: 100%;
   }
-
   &:hover a {
     font-size: 16px;
     font-weight: 400;
   }
+  
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+}
+
+.popup-content {
+  text-align: center;
+  p { 
+    font-family: overpass;
+  }
+  button {
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+
+
+.validation-error-privacy {
+  width: 100%;
+  color: red;
+  font-family: 'Overpass';
+  position: absolute;
+  top: 23px;
+  left: 0;
 }
 
 .submit {
   display: flex;
-  justify-content: center; /* Zentriert den Button horizontal */
-  align-items: center; /* Zentriert den Button vertikal */
-  position: relative; /* Setzt den Container in den relativen Modus */
-  padding: 20px; /* Fügt Padding hinzu, um Platz innerhalb des Containers zu schaffen */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20px;
   width: 100%;
 
   button {
@@ -253,10 +306,10 @@
   }
 
   .scroll-up {
-    position: absolute; /* Setzt den Container in den absoluten Modus */
-    right: 20px; /* Positioniert den Container 20px vom rechten Rand entfernt */
-    top: 45%; /* Zentriert den Container vertikal */
-    transform: translateY(-50%); /* Korrigiert die vertikale Positionierung */
+    position: absolute;
+    right: 20px;
+    top: 45%;
+    transform: translateY(-50%);
 
     a {
       display: flex;
@@ -265,11 +318,11 @@
     }
 
     img {
-      transition: transform 0.3s ease; /* Übergangseffekt für die Transformation */
-      transform-origin: bottom; /* Ursprung der Transformation auf die untere Kante setzen */
+      transition: transform 0.3s ease;
+      transform-origin: bottom;
 
       &:hover {
-        transform: scale(1, 1.7); /* Bild in Höhe und Breite strecken */
+        transform: scale(1, 1.7);
       }
     }
   }
@@ -303,14 +356,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 47px; // Abstand zwischen den Bildern
+    gap: 47px;
 
     a {
-      display: inline-block; // Ermöglicht die Anwendung von transform
-      transition: transform 0.3s ease; // Übergangseffekt für die Transformation
+      display: inline-block;
+      transition: transform 0.3s ease;
 
       &:hover {
-        transform: translateY(-15px); // Bewegt das Element um 5 Pixel nach oben
+        transform: translateY(-15px);
       }
 
       img {
@@ -343,9 +396,11 @@
 
   .logo-icons {
     width: 100%;
+
     .logo-user {
       margin-left: 32px;
     }
+
     .socials {
       margin-right: 64px;
     }
@@ -380,10 +435,26 @@
     form {
       .input-container {
         max-width: 400px;
+
         input,
         textarea {
           height: 40px;
           font-size: 14px;
+        }
+
+        .validation-error-input,
+        .validation-success-input {
+          position: absolute;
+          right: 10px;
+          top: 18px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          line-height: 20px;
         }
       }
     }
@@ -415,6 +486,7 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+
     .logo-user {
       margin-left: 0;
       margin-bottom: 20px;
@@ -422,6 +494,7 @@
       justify-content: center;
       align-items: center;
     }
+
     .socials {
       margin-right: 0;
       margin-bottom: 28px;
@@ -431,8 +504,16 @@
   .checkbox-container {
     label {
       justify-content: flex-start;
-      height: auto; /* Ermöglicht dem Label, sich an den Inhalt anzupassen */
-      width: 70%; /* Stellt sicher, dass das Label die volle Breite einnimmt */
+      height: auto;
+      width: 70%;
+    }
+    .validation-error-privacy {
+      width: 100%;
+      color: red;
+      font-family: 'Overpass';
+      position: absolute;
+      top: 28px;
+      left: 0;
     }
   }
 }
@@ -440,6 +521,7 @@
 @media (max-width: 550px) {
   .contact-section {
     padding: unset;
+
     h2 {
       padding: 0 30px;
       font-size: 45px;
@@ -449,6 +531,7 @@
 
   .form-container {
     padding: unset;
+
     h4 {
       font-size: 24px;
       line-height: 30px;
@@ -459,6 +542,7 @@
       line-height: 24px;
     }
   }
+
   .form-input {
     form {
       .input-container {
@@ -468,8 +552,37 @@
   }
 
   .checkbox-container {
+    width: 70%;
+    text-align: left;
     label {
-      font-size: 10px;
+      font-size: 16px;
+      line-height: 16px;
+      width: 100%;
+      margin-left: 16px;
+      a {
+        width: 108px;
+      } 
+    }
+    .validation-error-privacy {
+      width: 100%;
+      color: red;
+      font-family: 'Overpass';
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+}
+
+@media (max-width: 456px) {
+  .checkbox-container {
+  .validation-error-privacy {
+      width: 100%;
+      color: red;
+      font-family: 'Overpass';
+      position: absolute;
+      top: 43px;
+      left: 0;
     }
   }
 }
@@ -498,10 +611,26 @@
     form {
       .input-container {
         max-width: 250px;
+
         input,
         textarea {
           height: 30px;
           font-size: 12px;
+        }
+
+        .validation-error-input,
+        .validation-success-input {
+          position: absolute;
+          right: 10px;
+          top: 15px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          line-height: 20px;
         }
       }
     }
@@ -524,4 +653,32 @@
       font-size: 18px;
     }
   }
+}
+
+@media (max-width: 340px) {
+  .checkbox-container {
+    .validation-error-privacy {
+        width: 100%;
+        color: red;
+        font-family: 'Overpass';
+        position: absolute;
+        top: 60px;
+        left: 0;
+        font-size: 13px;
+      }
+    }
+}
+
+@media (max-width: 325px) {
+  .checkbox-container {
+    .validation-error-privacy {
+        width: 100%;
+        color: red;
+        font-family: 'Overpass';
+        position: absolute;
+        top: 73px;
+        left: 0;
+        font-size: 13px;
+      }
+    }
 }
