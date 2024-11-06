@@ -100,10 +100,6 @@
         color: #333;
         background-color: transparent;
 
-        &:hover {
-          border: 2px solid #fffcf3;
-        }
-
         &:focus {
           outline: none; // Entfernt den Standardfokusrahmen
           border-color: #fffcf3; // Setzt die Rahmenfarbe beim Fokus
@@ -303,6 +299,15 @@
     text-align: center;
     cursor: pointer;
     margin-bottom: 34px;
+    &:disabled {
+      background-color: transparent;
+      color: #5d5d5d;
+      cursor: not-allowed;
+    }
+    &:not(:disabled) {
+      color: white;
+      border-color: white;
+    }
   }
 
   .scroll-up {
@@ -328,51 +333,7 @@
   }
 }
 
-.logo-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1240px;
 
-  .logo-user {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-    img {
-      width: 60px;
-      height: 60px;
-    }
-
-    span {
-      font-family: overpass;
-      color: white;
-    }
-  }
-
-  .socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 47px;
-
-    a {
-      display: inline-block;
-      transition: transform 0.3s ease;
-
-      &:hover {
-        transform: translateY(-15px);
-      }
-
-      img {
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-}
 
 @media (max-width: 1280px) {
   .contact-section {
@@ -482,24 +443,7 @@
     display: none;
   }
 
-  .logo-icons {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-
-    .logo-user {
-      margin-left: 0;
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .socials {
-      margin-right: 0;
-      margin-bottom: 28px;
-    }
-  }
+ 
 
   .checkbox-container {
     label {

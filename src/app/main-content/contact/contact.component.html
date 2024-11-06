@@ -62,7 +62,7 @@
 
 
           <div class="submit">
-            <button type="submit" value="submit">Send message</button>
+            <button type="submit" [disabled]="!contactForm.valid" value="submit">Send message</button>
             <div class="scroll-up">
               <a href="#landingpage">
                 <img src="assets/img/arrow-up.png" alt="scroll-up" />
@@ -79,20 +79,9 @@
           </div>
         </div>
 
-      <div class="logo-icons">
-        <div class="logo-user">
-          <a href="#landingpage"><img src="assets/footer/logo-footer.png" alt="logo-footer"></a>
-          <span>&copy; Johannes Linnecke 2024</span>
-        </div>
-        <div class="socials">
-          <a href="https://github.com/JLinnecke?tab=repositories" target="_blank"><img src="assets/footer/git.png"
-              alt="git hub"></a> 
-          <a href="#contact"><img src="assets/footer/mail.png" alt="mail"></a>
-          <a href="https://www.linkedin.com/in/johannes-linnecke-b92251337/" target="_blank"><img
-              src="assets/footer/linkedin.png" alt="linkedin"></a>
-        </div>
+      
 
-      </div>
+      
 
     </div>
     <app-footer></app-footer>

@@ -9,6 +9,9 @@ export const routes: Routes = [
   { path: 'menu', component: MenuComponent },
   { path: 'imprint', component: ImprintComponent },
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'landingpage', component: MainContentComponent },
 ];
 
-export const AppRoutingModule = RouterModule.forRoot(routes);
+export const AppRoutingModule = RouterModule.forRoot(routes, {
+  scrollPositionRestoration: 'enabled',
+});
