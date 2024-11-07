@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
       this.route.fragment.subscribe(fragment => {
         this.fragment = fragment;
         if (!this.isMenuOpen && fragment) {
-          document.getElementById(fragment)?.scrollIntoView({ behavior: 'smooth' });
+          this.scrollToFragment(fragment);
         }
       });
     });
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
     } else {
       document.body.style.overflow = '';
       if (this.fragment) {
-        document.getElementById(this.fragment)?.scrollIntoView({ behavior: 'smooth' });
+        this.scrollToFragment(this.fragment);
         this.fragment = null;
       }
     }
@@ -55,8 +55,15 @@ export class AppComponent implements OnInit {
     this.isMenuOpen = false;
     document.body.style.overflow = '';
     if (this.fragment) {
-      document.getElementById(this.fragment)?.scrollIntoView({ behavior: 'smooth' });
+      this.scrollToFragment(this.fragment);
       this.fragment = null;
+    }
+  }
+
+  private scrollToFragment(fragment: string) {
+    const element = document.getElementById(fragment);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

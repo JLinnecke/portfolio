@@ -30,6 +30,7 @@ export class HeaderComponent {
   }
 
   toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
     this.menuToggle.emit();
   }
 
@@ -58,5 +59,19 @@ export class HeaderComponent {
     this.translate.use(newLanguage);
     this.currentLanguage = newLanguage;
     localStorage.setItem('language', newLanguage);
+  }
+
+  navigateToLandingPage() {
+    if (this.isMenuOpen) {
+      this.isMenuOpen = false;
+      document.body.style.overflow = '';
+      this.menuToggle.emit();
+    }
+    this.router.navigate(['/']).then(() => {
+      const element = document.getElementById('landingpage');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   }
 }
