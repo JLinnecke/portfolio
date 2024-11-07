@@ -13,7 +13,7 @@
     scroll-margin-top: 100px;
   }
 
-h2 {
+  h2 {
     font-family: syne;
     font-weight: 800;
     font-size: 78px;
@@ -26,10 +26,15 @@ h2 {
     left: 50%;
     width: 50%;
     background-color: #fffcf3;
+  
     &:hover {
-        color: #00bc8f;
+      color: #00bc8f;
     }
-}
+  
+    &.de-language {
+      width: 70%;
+    }
+  }
 
 span {
     font-family: overpass;
@@ -38,7 +43,6 @@ span {
     line-height: 19.2px;
     text-align: center;
 }
-
 
 .icon-container {
     display: grid;
@@ -51,8 +55,6 @@ span {
     padding: 0 100px; 
     box-sizing: border-box; 
   }
-
-
 
 .icon {
     display: flex;
@@ -81,7 +83,6 @@ span {
         }
     }
 }
-
 
 .skill-information {
     display: flex;
@@ -359,7 +360,14 @@ span {
     }
 }
 
+
+
 @media (max-width: 760px) {
+    h2 {
+        &.de-language {
+            width: 80%;
+        }
+    }
     .icon-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr); /* Drei Spalten */
@@ -399,6 +407,14 @@ span {
             font-size:18px;
             line-height: 22px
         };
+    }
+}
+
+@media (max-width: 630px) {
+    h2 {
+        &.de-language {
+            width: 90%;
+        }
     }
 }
 
@@ -449,6 +465,15 @@ span {
     }
 }
 
+@media (max-width: 560px) {
+    h2 {
+        &.de-language {
+            width: 90%;
+            font-size: 40px;
+        }
+    }
+}
+
 @media (max-width: 515px) {
     h2 {
         font-family: syne;
@@ -485,6 +510,16 @@ span {
             span {
                 font-size: 14px;
             }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    h2 {
+        &.de-language {
+            width: 90%;
+            font-size: 30px;
+            top: -45px;
         }
     }
 }
@@ -568,6 +603,16 @@ span {
     }
 }
 
+@media (max-width: 400px) {
+    h2 {
+        &.de-language {
+            width: 90%;
+            top: -40px;
+            font-size: 25px;
+        }
+    }
+}
+
 @media (max-width: 395px) {
     h2 {
         font-family: syne;
@@ -639,6 +684,16 @@ span {
         img {
             margin-top: -60px;
             width: 100px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    h2 {
+        &.de-language {
+            width: 90%;
+            top: -35px;
+            font-size: 20px;
         }
     }
 }
