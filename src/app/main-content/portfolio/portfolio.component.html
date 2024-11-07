@@ -1,4 +1,4 @@
-<div id="portfolio" class="portfolio">
+<div id="portfolio" [ngClass]="{'de-language': currentLanguage === 'de'}" class="portfolio">
   <h2>Portfolio</h2>
   <p>{{'EXPLORE' | translate}}
   </p>
@@ -13,7 +13,7 @@
       </div>
       <div class="description-join">
           <h3>01/02</h3>
-          <div class="details-join">
+          <div [ngClass]="{'de-language': currentLanguage === 'de'}" class="details-join">
               <h4>JOIN</h4>
               <span>Javascript | HTML | CSS | Firebase</span>
               <p>{{'JOIN' | translate}}</p>
@@ -24,7 +24,7 @@
     <div class="el-pollo-loco">
       <div class="description-pollo">
         <h3>02/02</h3>
-        <div class="details-pollo">
+        <div [ngClass]="{'de-language': currentLanguage === 'de'}" class="details-pollo">
           <h4>El Pollo Loco</h4>
           <span>HTML | CSS | Javascript</span>
           <p>{{'POLLO' | translate}}</p>
