@@ -8,6 +8,7 @@
     background-color: #fffcf3;
     width: 100%;
     height: 70px;
+
     .header-icons {
         display: flex;
         align-items: center;
@@ -16,12 +17,37 @@
         max-width: 1240px;
         margin: 0 auto;
     }
+
     .header-logo {
         img {
             width: 80px;
             height: 80px;
         }
     }
+
+    .language {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      
+        button {
+          background-color: transparent;
+          border: 2px solid #000;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 500;
+          width: 50px;
+          color: #000;
+          margin-right: 8px;
+          transition: background-color 0.2s, transform 0.2s;
+      
+          &:active {
+            background-color: #d0d0d0;
+            transform: scale(0.95);
+          }
+        }
+      }
+
     .header-burger-menu {
         button {
             background-color: transparent;
@@ -34,14 +60,14 @@
 @media (max-width: 1260px) {
     .header {
         width: 100%;
+
         .header-logo {
             margin-left: 8px;
         }
+
         .header-burger-menu {
             margin-right: 8px;
         }
     }
-    
+
 }
-
-

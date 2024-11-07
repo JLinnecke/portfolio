@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-            this.emailSent = true; // Show the popup
+            this.emailSent = true;
             ngForm.resetForm();
           },
           error: (error) => {
@@ -67,6 +67,6 @@ export class ContactComponent implements OnInit {
   }
 
   closePopup() {
-    this.emailSent = false; // Hide the popup
+    this.emailSent = false;
   }
 }

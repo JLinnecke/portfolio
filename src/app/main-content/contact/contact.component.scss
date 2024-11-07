@@ -1,7 +1,7 @@
 .contact {
   width: 100%;
-  position: relative; // Für die Positionierung des Pseudo-Elements
-  overflow: hidden; // Verhindert, dass der Inhalt über den Container hinausgeht
+  position: relative; 
+  overflow: hidden; 
 
   &::before {
     content: "";
@@ -10,9 +10,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: black; // Gleiche Hintergrundfarbe wie der Container
-    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); // Diagonale Form
-    z-index: -1; // Hinter den Inhalt legen
+    background-color: black;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); 
+    z-index: -1; 
   }
 }
 
@@ -90,7 +90,7 @@
       textarea {
         position: relative;
         width: 100%;
-        padding-right: 40px; // Platz für das Symbol
+        padding-right: 40px; 
         height: 50px;
         padding: 10px;
         border: none;
@@ -101,13 +101,13 @@
         background-color: transparent;
 
         &:focus {
-          outline: none; // Entfernt den Standardfokusrahmen
-          border-color: #fffcf3; // Setzt die Rahmenfarbe beim Fokus
+          outline: none; 
+          border-color: #fffcf3; 
         }
 
         &:not(:placeholder-shown) {
-          background-color: black; // Setzt die Hintergrundfarbe auf schwarz, wenn etwas hineingeschrieben wurde
-          color: white; // Optional: Setzt die Textfarbe auf weiß
+          background-color: black;
+          color: white;
         }
       }
 
@@ -221,11 +221,11 @@
     font-family: overpass;
     font-size: 14px;
     height: 27px;
-    color: #333;
+    color: #fffcf3;
 
     &.de-language {
       font-size: 18px;
-      color: #333;
+      color: #fffcf3;
     }
 
     a {

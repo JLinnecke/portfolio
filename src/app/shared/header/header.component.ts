@@ -23,18 +23,19 @@ export class HeaderComponent {
   currentLanguage: string;
 
   constructor(private router: Router, private translate: TranslateService) {
-    this.currentLanguage = this.translate.currentLang || 'en';
+    this.currentLanguage = localStorage.getItem('language') || 'en';
+    this.translate.use(this.currentLanguage);
   }
 
   toggleMenu() {
     if (this.isMenuOpen) {
-      this.animateMenuIcon(false); // Animate closing
-      this.router.navigate(['/']); // Navigate immediately
+      this.animateMenuIcon(false); 
+      this.router.navigate(['/']);
       this.isMenuOpen = false;
     } else {
       this.isMenuOpen = true;
-      this.router.navigate(['/menu']); // Navigate immediately
-      this.animateMenuIcon(true); // Animate opening
+      this.router.navigate(['/menu']);
+      this.animateMenuIcon(true);
     }
   }
 
@@ -46,21 +47,22 @@ export class HeaderComponent {
         index++;
         if (index >= this.images.length) {
           clearInterval(interval);
-          this.currentImageIndex = this.images.length - 1; // Set to the last image (close-menu)
+          this.currentImageIndex = this.images.length - 1;
         }
       } else {
         index--;
         if (index < 0) {
           clearInterval(interval);
-          this.currentImageIndex = 0; // Set to the first image (burger-menu)
+          this.currentImageIndex = 0;
         }
       }
-    }, 100); // Change image every 100ms
+    }, 100);
   }
 
   switchLanguage() {
     const newLanguage = this.currentLanguage === 'en' ? 'de' : 'en';
     this.translate.use(newLanguage);
     this.currentLanguage = newLanguage;
+    localStorage.setItem('language', newLanguage);
   }
 }
