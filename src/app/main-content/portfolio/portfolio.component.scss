@@ -76,7 +76,7 @@
         max-width: 620px;
         max-height: 339px;
         height: 100%;
-        
+
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
       }
@@ -677,6 +677,7 @@
         line-height: 22px;
         width: 80%;
       }
+
       &.de-language {
         p {
           font-size: 14px;
@@ -738,6 +739,7 @@
         line-height: 22px;
         width: 80%;
       }
+
       &.de-language {
         p {
           font-size: 14px;
@@ -1112,9 +1114,11 @@
         font-size: 18px;
         line-height: 22px;
       }
+
       button {
         font-size: 18px;
         padding: 15px 50px;
+
         &hover {
           width: 80%;
         }
@@ -1139,7 +1143,7 @@
   .el-pollo-loco {
     .img-pollo {
       justify-content: flex-end;
-      margin-right: 24px;
+      margin-right: 32px;
       width: 100%;
 
       .project-img {
@@ -1187,9 +1191,11 @@
         font-size: 18px;
         line-height: 22px;
       }
+
       button {
         font-size: 18px;
         padding: 15px 50px;
+
         &:hover {
           width: 80%;
         }
@@ -1207,6 +1213,30 @@
 
       .border-img .circle-arrow-top-right {
         transform: translate(180%, 180%) rotate(0deg) !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .el-pollo-loco {
+    .details-pollo {
+      h4 {
+        font-size: 26px;
+        width: 100%;
+      }
+    }
+    &:hover {
+      .details-pollo {
+        transform: translate(15%, 85%) !important;
+      }
+    }
+  }
+
+  .de-language .el-pollo-loco {
+    &:hover {
+      .details-pollo {
+        transform: translate(20%, 90%) !important;
       }
     }
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
@@ -11,6 +11,8 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Output() menuToggle = new EventEmitter<void>();
+
   isMenuOpen = false;
   currentImageIndex = 0;
   images = [
@@ -28,15 +30,7 @@ export class HeaderComponent {
   }
 
   toggleMenu() {
-    if (this.isMenuOpen) {
-      this.animateMenuIcon(false); 
-      this.router.navigate(['/']);
-      this.isMenuOpen = false;
-    } else {
-      this.isMenuOpen = true;
-      this.router.navigate(['/menu']);
-      this.animateMenuIcon(true);
-    }
+    this.menuToggle.emit();
   }
 
   animateMenuIcon(opening: boolean) {

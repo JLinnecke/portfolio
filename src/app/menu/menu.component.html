@@ -1,44 +1,46 @@
-<div class="menu">
-  <div class="menu-links">
-    <div class="link-container">
-      <h2><a href="#aboutme">About me</a></h2>
-      <div class="animation-container">
-        <div class="animation-line"></div>
-        <div class="animation-bar"></div>
+<div class="menu-overlay" [ngClass]="{'open': isMenuOpen}">
+  <div class="menu">
+    <div class="menu-links">
+      <div class="link-container">
+        <h2><a [routerLink]="['/']" fragment="aboutme" (click)="close()">About me</a></h2>
+        <div class="animation-container">
+          <div class="animation-line"></div>
+          <div class="animation-bar"></div>
+        </div>
       </div>
-    </div>
-    <div class="link-container">
-      <h2><a href="#skills">My skills</a></h2>
-      <div class="animation-container">
-        <div class="animation-line"></div>
-        <div class="animation-bar"></div>
+      <div class="link-container">
+        <h2><a [routerLink]="['/']" fragment="skills" (click)="close()">My skills</a></h2>
+        <div class="animation-container">
+          <div class="animation-line"></div>
+          <div class="animation-bar"></div>
+        </div>
       </div>
-    </div>
-    <div class="link-container">
-      <h2><a href="#portfolio">Portfolio</a></h2>
-      <div class="animation-container">
-        <div class="animation-line"></div>
-        <div class="animation-bar"></div>
+      <div class="link-container">
+        <h2><a [routerLink]="['/']" fragment="portfolio" (click)="close()">Portfolio</a></h2>
+        <div class="animation-container">
+          <div class="animation-line"></div>
+          <div class="animation-bar"></div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="contact">
-  <h3>Say Hi!</h3>
-  <div class="mail-icons">
-    <div class="mail">
-      <a href="#contact">jlinnecke&#64;gmail.com</a>
-    </div>
-    <div class="icons">
-      <a class="icon" href="https://github.com/JLinnecke?tab=repositories"
-        ><img src="assets/footer/git.png" alt=""
-      /></a>
-      <a class="icon" href="#contact"
-        ><img src="assets/footer/mail.png" alt=""
-      /></a>
-      <a class="icon" href="https://www.linkedin.com/in/johannes-linnecke-b92251337/"
-        ><img src="assets/footer/linkedin.png" alt=""
-      /></a>
+  <div class="contact">
+    <h3>Say Hi!</h3>
+    <div class="mail-icons">
+      <div class="mail">
+        <a [routerLink]="['/']" fragment="contact" (click)="close()">jlinnecke&#64;gmail.com</a>
+      </div>
+      <div class="icons">
+        <a class="icon" href="https://github.com/JLinnecke?tab=repositories"
+          ><img src="assets/footer/git.png" alt=""
+        /></a>
+        <a class="icon" [routerLink]="['/']" fragment="contact" (click)="close()"
+          ><img src="assets/footer/mail.png" alt=""
+        /></a>
+        <a class="icon" href="https://www.linkedin.com/in/johannes-linnecke-b92251337/"
+          ><img src="assets/footer/linkedin.png" alt=""
+        /></a>
+      </div>
     </div>
   </div>
 </div>
