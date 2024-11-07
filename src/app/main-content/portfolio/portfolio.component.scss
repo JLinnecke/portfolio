@@ -486,6 +486,7 @@
     .img-join {
       .project-img {
         width: 100%;
+        filter: saturate(100%);
         max-width: 516px;
         max-height: 300px;
         height: auto;
@@ -497,20 +498,23 @@
         .border-join {
           max-width: 516px !important;
           max-height: 250px !important;
+          opacity: 1;
         }
 
         .circle-arrow-down {
-          transform: translate(50%, 120%) rotate(0deg);
+          display: none;
         }
 
         .circle-arrow-top-right {
-          transform: translate(50%, 100%) rotate(105deg);
+          transform: translate(50%, 100%);
+          opacity: 1;
         }
       }
     }
 
     .details-join {
-      transform: translate(1%, 50%);
+      transform: translate(1%, 190%);
+      opacity: 1;
 
       h4 {
         font-size: 30px;
@@ -535,18 +539,17 @@
 
     &:hover {
       .details-join {
-        opacity: 1;
-        transform: translate(1%, 165%);
+        opacity: 1 !important;
+        transform: translate(1%, 190%) !important;
       }
 
       .circle-arrow-down {
-        opacity: 1;
-        transform: translate(50%, 120%) rotate(-40deg) !important;
+        display: none !important;
       }
 
       .circle-arrow-top-right {
-        opacity: 1;
-        transform: translate(50%, 100%) rotate(0deg) !important;
+        transform: translate(50%, 100%) !important;
+        opacity: 1 !important;
       }
     }
   }
@@ -555,6 +558,7 @@
     .img-pollo {
       .project-img {
         width: 100%;
+        filter: saturate(100%);
         max-width: 516px;
         max-height: 300px;
         height: auto;
@@ -564,6 +568,7 @@
 
       .border-img {
         .border-pollo {
+          opacity: 1;
           max-width: 516px !important;
           max-height: 250px !important;
         }
@@ -573,13 +578,15 @@
         }
 
         .circle-arrow-top-right {
-          transform: translate(-50%, 150%) rotate(105deg);
+          transform: translate(-50%, 150%);
+          opacity: 1;
         }
       }
     }
 
     .details-pollo {
-      transform: translate(-20%, 40%);
+      transform: translate(-1%, 175%);
+      opacity: 1;
 
       h4 {
         font-size: 30px;
@@ -604,18 +611,17 @@
 
     &:hover {
       .details-pollo {
-        opacity: 1;
-        transform: translate(0%, 175%);
+        opacity: 1 !important;
+        transform: translate(-1%, 175%) !important;
       }
 
       .circle-arrow-down {
-        transform: translate(-50%, 170%) rotate(-40deg) !important;
-        opacity: 1;
+        display: none !important;
       }
 
       .circle-arrow-top-right {
-        transform: translate(-50%, 150%) rotate(0deg) !important;
-        opacity: 1;
+        transform: translate(-50%, 150%) !important;
+        opacity: 1 !important;
       }
     }
   }
@@ -651,7 +657,7 @@
         .border-join {
           max-width: 400px !important;
           max-height: 200px !important;
-          opacity: 0;
+          opacity: 1;
         }
 
         .circle-arrow-down {
@@ -661,15 +667,15 @@
         }
 
         .circle-arrow-top-right {
-          transform: translate(50%, 200%) rotate(105deg);
+          transform: translate(50%, 200%);
           width: 10%;
-          opacity: 0;
+          opacity: 1;
         }
       }
     }
 
     .details-join {
-      transform: translate(28%, 50%);
+      transform: translate(28%, 150%);
       width: 70%;
 
       p {
@@ -688,11 +694,12 @@
     &:hover {
       .details-join {
         opacity: 1;
-        transform: translate(28%, 145%);
+        transform: translate(28%, 150%) !important;
       }
 
       .circle-arrow-down {
         transform: translate(50%, 200%) rotate(-40deg) !important;
+        opacity: 0 !important;
       }
 
       .circle-arrow-top-right {
@@ -721,17 +728,18 @@
         .circle-arrow-down {
           transform: translate(-47%, 250%) rotate(0deg);
           width: 10%;
+          opacity: 0;
         }
 
         .circle-arrow-top-right {
-          transform: translate(-47%, 250%) rotate(105deg);
+          transform: translate(-47%, 250%);
           width: 10%;
         }
       }
     }
 
     .details-pollo {
-      transform: translate(0%, 40%);
+      transform: translate(15%, 140%);
       width: 70%;
 
       p {
@@ -750,11 +758,12 @@
     &:hover {
       .details-pollo {
         opacity: 1;
-        transform: translate(15%, 145%);
+        transform: translate(15%, 140%) !important;
       }
 
       .circle-arrow-down {
         transform: translate(-47%, 250%) rotate(-40deg) !important;
+        opacity: 0 !important;
       }
 
       .circle-arrow-top-right {
@@ -782,16 +791,19 @@
           width: 80%;
           left: 30px;
           top: -10px;
+          opacity: 1;
         }
 
         .circle-arrow-down {
           transform: translate(-75%, 160%) rotate(0deg);
           width: 10%;
+          opacity: 0;
         }
 
         .circle-arrow-top-right {
-          transform: translate(-75%, 160%) rotate(105deg);
+          transform: translate(-75%, 160%);
           width: 10%;
+          opacity: 1;
         }
       }
     }
@@ -802,7 +814,7 @@
       }
 
       .details-join {
-        transform: translate(23%, 40%);
+        transform: translate(23%, 125%);
         width: 80%;
 
         h4 {
@@ -822,7 +834,7 @@
       }
 
       .border-img .circle-arrow-down {
-        opacity: 1;
+        opacity: 0 !important;
         transform: translate(-75%, 160%) rotate(-40deg) !important;
       }
 
@@ -856,11 +868,13 @@
         .circle-arrow-down {
           transform: translate(77%, 230%) rotate(0deg);
           width: 10%;
+          opacity: 0;
         }
 
         .circle-arrow-top-right {
-          transform: translate(77%, 230%) rotate(105deg);
+          transform: translate(77%, 230%);
           width: 10%;
+          opacity: 1;
         }
       }
     }
@@ -871,7 +885,7 @@
       }
 
       .details-pollo {
-        transform: translate(2%, 40%);
+        transform: translate(2%, 125%);
         width: 80%;
 
         h4 {
@@ -887,7 +901,7 @@
     &:hover {
       .details-pollo {
         opacity: 1;
-        transform: translate(2%, 135%) !important;
+        transform: translate(2%, 125%) !important;
       }
 
       .border-img .border-pollo {
@@ -895,7 +909,7 @@
       }
 
       .border-img .circle-arrow-down {
-        opacity: 1;
+        opacity: 0 !important;
         transform: translate(77%, 230%) rotate(-40deg) !important;
       }
 
@@ -908,7 +922,7 @@
 }
 
 @media (max-width: 450px) {
-  
+
 
   .join {
     width: 100%;
@@ -927,53 +941,64 @@
       }
 
       .border-img {
+        width: 80%;
+
         .border-join {
-          width: 80%;
+          width: 100%;
           height: 75%;
           top: -10px;
           left: 30px;
+          opacity: 1;
         }
 
         .circle-arrow-down {
-          transform: translate(-75%, 100%) rotate(0deg);
+          transform: translate(140%, 150%) rotate(0deg);
           width: 10%;
+          opacity: 0;
         }
 
         .circle-arrow-top-right {
-          transform: translate(-75%, 100%) rotate(105deg);
+          transform: translate(140%, 150%);
           width: 10%;
+          opacity: 1;
         }
       }
     }
 
-    .details-join {
-      button {
-        &:hover {
-          width: 60%;
-          font-weight: 700;
-          border: 6px solid black;
+    .description-join {
+      .details-join {
+        transform: translate(20%, 100%);
+        width: 70%;
+
+        button {
+          &:hover {
+            width: 60%;
+            font-weight: 700;
+            border: 6px solid black;
+          }
         }
       }
     }
-
 
     &:hover {
       .details-join {
-        transform: translate(23%, 105%) !important;
+        transform: translate(20%, 100%) !important;
       }
 
       .border-img .circle-arrow-down {
-        transform: translate(-75%, 100%) rotate(-40deg) !important;
+        transform: translate(140%, 150%) rotate(-40deg) !important;
+        opacity: 0 !important;
       }
 
       .border-img .circle-arrow-top-right {
-        transform: translate(-75%, 100%) rotate(0deg) !important;
+        transform: translate(140%, 150%) rotate(0deg) !important;
       }
     }
   }
 
   .el-pollo-loco {
     width: 100%;
+
 
     .img-pollo {
       display: flex;
@@ -998,16 +1023,20 @@
         .circle-arrow-down {
           transform: translate(75%, 180%) rotate(0deg);
           width: 10%;
+          opacity: 0;
         }
 
         .circle-arrow-top-right {
-          transform: translate(75%, 180%) rotate(105deg);
+          transform: translate(75%, 180%);
           width: 10%;
+          opacity: 1;
         }
       }
     }
 
     .details-pollo {
+      transform: translate(10%, 110%) !important;
+
       button {
         &:hover {
           width: 60%;
@@ -1020,19 +1049,109 @@
 
     &:hover {
       .details-pollo {
-        transform: translate(2%, 115%) !important;
+        transform: translate(10%, 110%) !important;
       }
 
       .border-img .circle-arrow-down {
         transform: translate(75%, 180%) rotate(-40deg) !important;
+        opacity: 0 !important;
       }
 
       .border-img .circle-arrow-top-right {
         transform: translate(75%, 180%) rotate(0deg) !important;
+        opacity: 1 !important;
       }
     }
   }
 }
+
+@media (max-width: 410px) {
+  .portfolio {
+    h2 {
+      font-size: 35px;
+      line-height: 35px;
+      width: 300px;
+    }
+    p {
+      width: 200px;
+    }
+  }
+  .join {
+    .img-join {
+      .border-img {
+        .border-join {
+          width: 100%;
+          height: 75%;
+          top: 0;
+          left: -10px;
+          opacity: 1;
+        }
+        .circle-arrow-down {
+          transform: translate(140%, 150%) rotate(0deg);
+          width: 10%;
+          opacity: 0;
+        }
+
+        .circle-arrow-top-right {
+          transform: translate(10%, 200%) !important;
+          width: 10%;
+          opacity: 1;
+        }
+      }
+    }
+    .description-join {
+      .details-join {
+        transform: translate(15%, 75%) !important;
+        width: 70%;
+
+        button {
+          &:hover {
+            width: 60%;
+            font-weight: 700;
+            border: 6px solid black;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .details-join {
+        transform: translate(15%, 75%) !important;
+      }
+
+      .border-img .circle-arrow-down {
+        transform: translate(140%, 150%) rotate(-40deg) !important;
+        opacity: 0 !important;
+      }
+
+      .border-img .circle-arrow-top-right {
+        transform: translate(10%, 200%) rotate(0deg) !important;
+      }
+    }
+  }
+  .el-pollo-loco {
+
+    .border-img {
+      .border-pollo {
+        width: 80%;
+        left: 50px;
+        top: 20px;
+      }
+
+      .circle-arrow-down {
+        transform: translate(77%, 230%) rotate(0deg);
+        width: 10%;
+        opacity: 0;
+      }
+
+      .circle-arrow-top-right {
+        transform: translate(77%, 230%);
+        width: 10%;
+        opacity: 1;
+      }
+    }
+  }
+  }
 
 @media (max-width: 402px) {
   .portfolio {
@@ -1045,57 +1164,52 @@
     p {
       width: 200px;
     }
-
-    .el-pollo-loco {
-      .border-img {
-        .circle-arrow-down {
-          transform: translate(80%, 180%) rotate(0deg);
-        }
-
-        .circle-arrow-top-right {
-          transform: translate(75%, 180%) rotate(105deg);
-          opacity: 0;
-        }
-      }
-    }
   }
+
 }
 
 @media (max-width: 375px) {
   .join {
+    max-width: 320px;
+    box-sizing: border-box;
+
     .img-join {
-      justify-content: flex-start;
-      margin-left: 16px;
       width: 100%;
 
       .project-img {
         width: 80%;
+        filter: saturate(100%);
         height: auto;
         min-width: unset;
         min-height: unset;
       }
 
       .border-img {
+        left: 15%;
+        top: 32%;
+
         .border-join {
-          width: 80%;
+          width: 100%;
           height: 75%;
-          top: -10px;
+          top: 0;
           left: -10px;
+          opacity: 1;
         }
 
         .circle-arrow-down {
-          transform: translate(-180%, 100%) rotate(0deg);
+          display: none;
         }
 
         .circle-arrow-top-right {
-          transform: translate(-180%, 100%) rotate(105deg);
+          transform: translate(10%, 200%);
         }
       }
     }
 
     .details-join {
-      transform: translate(5%, 40%);
+      transform: translate(15%, 75%) !important;
       width: 80%;
+      opacity: 1;
 
       h4 {
         font-size: 30px;
@@ -1123,56 +1237,49 @@
       }
     }
 
-    &:hover {
-      .details-join {
-        transform: translate(5%, 90%) !important;
-      }
 
-      .border-img .circle-arrow-down {
-        transform: translate(-180%, 100%) rotate(-40deg) !important;
-      }
-
-      .border-img .circle-arrow-top-right {
-        transform: translate(-180%, 100%) rotate(0deg) !important;
-      }
-    }
   }
 
   .el-pollo-loco {
     .img-pollo {
-      justify-content: flex-end;
-      margin-right: 32px;
       width: 100%;
 
       .project-img {
         width: 80%;
+        filter: saturate(100%);
         height: auto;
         min-width: unset;
         min-height: unset;
       }
 
       .border-img {
+        right: 13%;
+
         .border-pollo {
           width: 80%;
           height: 75%;
           top: 20px;
-          right: -10px;
+          right: 0;
           left: unset;
+          opacity: 1;
         }
 
         .circle-arrow-down {
           transform: translate(180%, 180%) rotate(0deg);
+          opacity: 0 !important;
         }
 
         .circle-arrow-top-right {
-          transform: translate(180%, 180%) rotate(105deg);
+          transform: translate(155%, 180%);
+          opacity: 1;
         }
       }
     }
 
     .details-pollo {
-      transform: translate(5%, 40%);
+      transform: translate(13%, 100%) !important;
       width: 80%;
+      opacity: 1;
 
       h4 {
         font-size: 30px;
@@ -1202,15 +1309,115 @@
 
     &:hover {
       .details-pollo {
-        transform: translate(20%, 105%) !important;
+        transform: translate(13%, 100%) !important;
       }
 
       .border-img .circle-arrow-down {
         transform: translate(180%, 180%) rotate(-40deg) !important;
+        opacity: 0 !important;
       }
 
       .border-img .circle-arrow-top-right {
-        transform: translate(180%, 180%) rotate(0deg) !important;
+        transform: translate(155%, 180%)!important;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .join {
+    .description-join {
+      width: 100%;
+      .details-join {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100%;
+        transform: translate(0%, 100%) !important;
+        
+        h4 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 26px;
+          width: 100%;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          width: 100%;
+        }
+
+        p {
+          display: flex;
+          text-align: center;
+          font-size: 14px;
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  .el-pollo-loco {
+
+    .description-pollo {
+      width: 100%;
+      .details-pollo {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100%;
+        transform: translate(0%, 100%) !important;
+        h4 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 26px;
+          width: 100%;
+        }
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 18px;
+          width: 100%;
+        }
+        p {
+          display: flex!important;
+          text-align: center;
+          font-size: 14px;
+          width: 70%;
+        }
+      }
+    }
+
+    .img-pollo {
+      .border-img {
+
+        .circle-arrow-down {
+          transform: translate(180%, 180%) rotate(0deg);
+        }
+
+        .circle-arrow-top-right {
+          transform: translate(150%, 200%);
+        }
+      }
+    }
+    &:hover {
+      .details-pollo {
+        transform: translate(13%, 100%) !important;
+      }
+
+      .border-img .circle-arrow-down {
+        transform: translate(180%, 180%) rotate(-40deg) !important;
+        opacity: 0 !important;
+      }
+
+      .border-img .circle-arrow-top-right {
+        transform: translate(150%, 200%)!important;
       }
     }
   }
@@ -1222,19 +1429,6 @@
       h4 {
         font-size: 26px;
         width: 100%;
-      }
-    }
-    &:hover {
-      .details-pollo {
-        transform: translate(15%, 85%) !important;
-      }
-    }
-  }
-
-  .de-language .el-pollo-loco {
-    &:hover {
-      .details-pollo {
-        transform: translate(20%, 90%) !important;
       }
     }
   }
