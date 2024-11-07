@@ -2,8 +2,8 @@
   <div class="contact-section">
     <h2>Say Hi!</h2>
     <div class="form-container">
-      <h4>{{'DISCUSS' | translate}}</h4>
-      <p>{{'SAY_HELLO' | translate}}</p>
+      <h4 [ngClass]="{'de-language': currentLanguage === 'de'}">{{'DISCUSS' | translate}}</h4>
+      <p [ngClass]="{'de-language': currentLanguage === 'de'}">{{ 'SAY_HELLO' | translate }}</p>
       <div class="form-input">
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
@@ -49,14 +49,17 @@
 
 
           <div class="checkbox-container">
-            <div class="hover-checkbox"><input type="checkbox" id="subscribe" name="subscribe" ngModel required #subscribe="ngModel" /></div>
-            <label>{{'PRIVACY_1' | translate}}<a [routerLink]="['/privacy-policy']">{{'PRIVACY_2' | translate}}</a> {{'PRIVACY_3' | translate}}.</label>   
-              <div *ngIf="subscribe.invalid && subscribe.touched" class="validation-error-privacy">
-                <span>Please accept the privacy policy.</span>
-              </div>
+            <div class="hover-checkbox"><input type="checkbox" id="subscribe" name="subscribe" ngModel required
+                #subscribe="ngModel" /></div>
+            <label [ngClass]="{'de-language': currentLanguage === 'de'}">{{'PRIVACY_1' | translate}}<a
+                [ngClass]="{'de-language': currentLanguage === 'de'}" [routerLink]="['/privacy-policy']">{{'PRIVACY_2' |
+                translate}}</a> {{'PRIVACY_3' | translate}}</label>
+            <div *ngIf="subscribe.invalid && subscribe.touched" class="validation-error-privacy">
+              <span>Please accept the privacy policy.</span>
+            </div>
           </div>
-          
-          
+
+
 
 
 
@@ -70,17 +73,17 @@
           </div>
         </form>
       </div>
-      
-        <div *ngIf="emailSent" class="popup">
-          <div class="popup-content">
-            <p>Email successfully sent!</p>
-            <button (click)="closePopup()">Close</button>
-          </div>
+
+      <div *ngIf="emailSent" class="popup">
+        <div class="popup-content">
+          <p>Email successfully sent!</p>
+          <button (click)="closePopup()">Close</button>
         </div>
+      </div>
 
-      
 
-      
+
+
 
     </div>
     <app-footer></app-footer>

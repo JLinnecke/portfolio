@@ -15,13 +15,14 @@
     "JOIN" : "Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, weisen Sie Benutzer und Kategorien zu.",
     "POLLO" : "Ein kurzes Jump-and-Run-Spiel auf JavaScript-Basis, entwickelt nach dem Prinzip der Objektorientierung.",
 
+    "REFERENCE" : "Referenzen",
     "WORK" : "Ich fühle mich sowohl in eigenständiger Arbeit als auch im Team wohl. Hier erfahren Sie, was meine Kolleginnen und Kollegen über die Zusammenarbeit mit mir sagen.",
     "REF_1" : "Johannes ist ein großartiger Teamplayer. Er ist stets bereit zu helfen und zeichnet sich durch ausgezeichnete Fähigkeiten zur Problemlösung aus.",
 
     "DISCUSS" : "Möchten Sie ein neues Projekt besprechen?",
     "SAY_HELLO" : "Sagen Sie Hallo! Lassen Sie uns Ihre Ideen besprechen und gemeinsam umsetzen.",
-    "PRIVACY_1" :"Ich habe die gelesen und stimme zu.",
-    "PRIVACY_2" :"Datenschutzerklärung",
+    "PRIVACY_1" :"Ich habe die ",
+    "PRIVACY_2" :"Datenschutzerklärung ",
     "PRIVACY_3" :"gelesen und stimme zu.",
 
     "IMPRINT": "Impressum",

@@ -121,8 +121,8 @@
         right: 10px;
         top: 10px;
         width: 20px;
-        height: 20px;       
-        border-radius: 50%;        
+        height: 20px;
+        border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -175,7 +175,9 @@
   text-align: center;
   position: relative;
   margin-top: 10px;
-  gap: 7px;
+  width: 100%;
+  max-width: 1240px;
+  gap: 30px;
 
   .hover-checkbox {
     height: 32px;
@@ -220,11 +222,21 @@
     font-size: 14px;
     height: 27px;
     color: #333;
+
+    &.de-language {
+      font-size: 18px;
+      color: #333;
+    }
+
     a {
       width: 100px;
       color: #00bc8f;
       text-decoration: none;
       transition: font-weight 0.3s ease;
+
+      &.de-language {
+        width: 200px;
+      }
     }
   }
 
@@ -232,11 +244,12 @@
     background-color: #00bc8f;
     border-radius: 100%;
   }
+
   &:hover a {
     font-size: 16px;
     font-weight: 400;
   }
-  
+
 }
 
 .popup {
@@ -248,14 +261,16 @@
   border: 2px solid white;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
+
 }
 
 .popup-content {
   text-align: center;
-  p { 
+
+  p {
     font-family: overpass;
   }
+
   button {
     cursor: pointer;
     font-size: 20px;
@@ -299,11 +314,13 @@
     text-align: center;
     cursor: pointer;
     margin-bottom: 34px;
+
     &:disabled {
       background-color: transparent;
       color: #5d5d5d;
       cursor: not-allowed;
     }
+
     &:not(:disabled) {
       color: white;
       border-color: white;
@@ -369,6 +386,24 @@
 
   .scroll-up {
     right: 80px !important;
+  }
+}
+
+@media (max-width: 920px) {
+  .form-container {
+    h4 {
+      &.de-language {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+
+    p {
+      &.de-language {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
   }
 }
 
@@ -438,12 +473,60 @@
   }
 }
 
+@media (max-width: 700px) {
+  .form-container {
+    h4 {
+      &.de-language {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+
+    p {
+      &.de-language {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .checkbox-container {
+    label {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      font-family: overpass;
+      font-size: 14px;
+      height: 27px;
+      color: #333;
+
+      &.de-language {
+        font-size: 14px;
+        color: #333;
+      }
+
+      a {
+        width: 100px;
+        color: #00bc8f;
+        text-decoration: none;
+        transition: font-weight 0.3s ease;
+
+        &.de-language {
+          width: 160px;
+          
+      
+          
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 600px) {
   .scroll-up {
     display: none;
   }
-
- 
 
   .checkbox-container {
     label {
@@ -451,6 +534,7 @@
       height: auto;
       width: 70%;
     }
+
     .validation-error-privacy {
       width: 100%;
       color: red;
@@ -462,7 +546,7 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 555px) {
   .contact-section {
     padding: unset;
 
@@ -498,15 +582,18 @@
   .checkbox-container {
     width: 70%;
     text-align: left;
+
     label {
       font-size: 16px;
       line-height: 16px;
       width: 100%;
       margin-left: 16px;
+
       a {
         width: 108px;
-      } 
+      }
     }
+
     .validation-error-privacy {
       width: 100%;
       color: red;
@@ -520,7 +607,7 @@
 
 @media (max-width: 456px) {
   .checkbox-container {
-  .validation-error-privacy {
+    .validation-error-privacy {
       width: 100%;
       color: red;
       font-family: 'Overpass';
@@ -602,27 +689,27 @@
 @media (max-width: 340px) {
   .checkbox-container {
     .validation-error-privacy {
-        width: 100%;
-        color: red;
-        font-family: 'Overpass';
-        position: absolute;
-        top: 60px;
-        left: 0;
-        font-size: 13px;
-      }
+      width: 100%;
+      color: red;
+      font-family: 'Overpass';
+      position: absolute;
+      top: 60px;
+      left: 0;
+      font-size: 13px;
     }
+  }
 }
 
 @media (max-width: 325px) {
   .checkbox-container {
     .validation-error-privacy {
-        width: 100%;
-        color: red;
-        font-family: 'Overpass';
-        position: absolute;
-        top: 73px;
-        left: 0;
-        font-size: 13px;
-      }
+      width: 100%;
+      color: red;
+      font-family: 'Overpass';
+      position: absolute;
+      top: 73px;
+      left: 0;
+      font-size: 13px;
     }
+  }
 }

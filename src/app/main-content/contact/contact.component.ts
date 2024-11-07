@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { FormsModule, NgForm } from '@angular/forms';
@@ -13,11 +13,17 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent {
+export class ContactComponent implements OnInit {
+  currentLanguage: string;
+
   constructor(private translate: TranslateService) {
-    this.translate.addLangs(['de', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.currentLanguage = this.translate.currentLang || 'en';
+  }
+
+  ngOnInit() {
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLanguage = event.lang;
+    });
   }
 
   http = inject(HttpClient);
