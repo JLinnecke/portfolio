@@ -13,7 +13,7 @@
               placeholder="Your name" required />
             <span *ngIf="!name.valid && name.touched && !name.disabled" class="validation-error-input">!</span>
             <span *ngIf="name.valid && name.touched && !name.disabled" class="validation-success-input">✔</span>
-            <div *ngIf="!name.valid && name.touched && !name.disabled">
+            <div *ngIf="!name.valid && name.touched && !name.disabled" style="margin-top: 8px;">
               <span style="color: red; font-family: overpass;">Your email is required</span>
             </div>
           </div>
@@ -25,7 +25,7 @@
               placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required />
             <span *ngIf="!email.valid && email.touched && !email.disabled" class="validation-error-input">!</span>
             <span *ngIf="email.valid && email.touched && !email.disabled" class="validation-success-input">✔</span>
-            <div *ngIf="!email.valid && email.touched && !email.disabled">
+            <div *ngIf="!email.valid && email.touched && !email.disabled" style="margin-top: 8px;">
               <span style="color: red; font-family: overpass;">Your email is required</span>
             </div>
           </div>
@@ -37,7 +37,7 @@
               placeholder="Your message" required></textarea>
             <span *ngIf="!message.valid && message.touched && !message.disabled" class="validation-error">!</span>
             <span *ngIf="message.valid && message.touched && !message.disabled" class="validation-success">✔</span>
-            <div *ngIf="!message.valid && message.touched && !message.disabled">
+            <div *ngIf="!message.valid && message.touched && !message.disabled" style="margin-top: 8px;">
               <span style="color: red; font-family: overpass;">Your message is empty</span>
             </div>
           </div>

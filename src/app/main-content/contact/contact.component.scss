@@ -601,7 +601,7 @@
       color: red;
       font-family: 'Overpass';
       position: absolute;
-      top: 90%;
+      top: 95%;
       left: 15%;
     }
   }
@@ -700,12 +700,13 @@
       color: red;
       font-family: 'Overpass';
       position: absolute;
-      top: 95%;
+      top: 120%;
       left: 10%;
     }
   }
 
   .submit {
+    margin-top: 16px;
     button {
       width: 200px;
       height: 48px;
@@ -722,7 +723,7 @@
       color: red;
       font-family: 'Overpass';
       position: absolute;
-      top: 98%;
+      top: 120%;
       left: 17%;
       font-size: 13px;
     }
