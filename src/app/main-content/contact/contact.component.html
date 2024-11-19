@@ -10,11 +10,11 @@
 
           <div class="input-container">
             <input #name="ngModel" minlength="3" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-              placeholder="Your name" required />
+              [placeholder]="'NAME' | translate" required />
             <span *ngIf="!name.valid && name.touched && !name.disabled" class="validation-error-input">!</span>
             <span *ngIf="name.valid && name.touched && !name.disabled" class="validation-success-input">✔</span>
             <div *ngIf="!name.valid && name.touched && !name.disabled" style="margin-top: 8px;">
-              <span style="color: red; font-family: overpass;">Your email is required</span>
+              <span style="color: red; font-family: overpass;">{{'VALID_NAME' | translate}}</span>
             </div>
           </div>
 
@@ -22,11 +22,12 @@
 
           <div class="input-container">
             <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-              placeholder="Your email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required />
+              [placeholder]="'EMAIL' | translate" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required />
             <span *ngIf="!email.valid && email.touched && !email.disabled" class="validation-error-input">!</span>
             <span *ngIf="email.valid && email.touched && !email.disabled" class="validation-success-input">✔</span>
+
             <div *ngIf="!email.valid && email.touched && !email.disabled" style="margin-top: 8px;">
-              <span style="color: red; font-family: overpass;">Your email is required</span>
+              <span style="color: red; font-family: overpass;">{{'VALID_EMAIL' | translate}}</span>
             </div>
           </div>
 
@@ -34,11 +35,12 @@
 
           <div class="input-container">
             <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message"
-              placeholder="Your message" required></textarea>
+              [placeholder]="'MESSAGE' | translate" required></textarea>
             <span *ngIf="!message.valid && message.touched && !message.disabled" class="validation-error">!</span>
             <span *ngIf="message.valid && message.touched && !message.disabled" class="validation-success">✔</span>
+
             <div *ngIf="!message.valid && message.touched && !message.disabled" style="margin-top: 8px;">
-              <span style="color: red; font-family: overpass;">Your message is empty</span>
+              <span style="color: red; font-family: overpass;">{{'VALID_MESSAGE' | translate}}</span>
             </div>
           </div>
 
@@ -54,8 +56,8 @@
             <label [ngClass]="{'de-language': currentLanguage === 'de'}">{{'PRIVACY_1' | translate}}<a
                 [ngClass]="{'de-language': currentLanguage === 'de'}" [routerLink]="['/privacy-policy']">{{'PRIVACY_2' |
                 translate}}</a> {{'PRIVACY_3' | translate}}</label>
-            <div *ngIf="subscribe.invalid && subscribe.touched" class="validation-error-privacy">
-              <span>Please accept the privacy policy.</span>
+            <div *ngIf="subscribe.invalid && subscribe.touched" class="validation-error-privacy" [ngClass]="{'de-language': currentLanguage === 'de'}">
+              <span>{{'VALID_PRIVACY' | translate}}</span>
             </div>
           </div>
 
@@ -64,7 +66,7 @@
 
 
           <div class="submit">
-            <button type="submit" [disabled]="!contactForm.valid" value="submit">Send message</button>
+            <button type="submit" [disabled]="!contactForm.valid" value="submit">{{'SEND' | translate}}</button>
             <div class="scroll-up">
               <a href="#landingpage">
                 <img src="assets/img/arrow-up.png" alt="scroll-up" />
@@ -76,7 +78,7 @@
 
       <div *ngIf="emailSent" class="popup">
         <div class="popup-content">
-          <p>Email successfully sent!</p>
+          <p>{{'SEND_MAIL' | translate}}</p>
           <button (click)="closePopup()">Close</button>
         </div>
       </div>

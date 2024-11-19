@@ -602,8 +602,14 @@
       font-family: 'Overpass';
       position: absolute;
       top: 95%;
-      left: 15%;
+      left: 15%; 
+      &.de-language {
+        top: 90%; /* Beispiel für eine andere Positionierung */
+        left: 10%; /* Beispiel für eine andere Positionierung */
+        font-size: 12px; /* Kleinere Schriftgröße */
+      }
     }
+    
   }
 
   .checkbox-container {
@@ -702,6 +708,10 @@
       position: absolute;
       top: 120%;
       left: 10%;
+      &.de-language {
+        top: 120%; /* Beispiel für eine andere Positionierung */
+        left: 10%; /* Beispiel für eine andere Positionierung */
+      }
     }
   }
 

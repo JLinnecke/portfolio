@@ -11,13 +11,15 @@
     "DONT_SEE" : "Don't see the skill you need?",
     "READY_LEARN" : "I'm always ready to learn!",
 
-    "EXPLORE": "Explore here a selection of my works - Interact with the projects to see my skills in action.",
+    "EXPLORE": "Explore here a selection of my work - Interact with the projects to see my skills in action.",
     "JOIN" : "A task manager inspired by the Kanban system. Create and organize tasks by drag-and-drop, assign users and categories.",
     "POLLO" : "A short jump-and-run game based on JavaScript, developed following the principles of object-oriented programming.",
 
     "REFERENCE" : "References",
     "WORK" : "I thrive both independently and as part of a team. Here's what my colleagues have to say about working with me",
     "REF_1" : "Johannes is a great team player. He is always willing to help out and is a great problem solver.",
+    "REF_2" : "Johannes works independently and is always striving to learn and improve his skills.",
+    "REF_3" : "Johannes always brings in his ideas and solutions to problems in order to reach a conclusion more quickly with his team.",
 
     "DISCUSS" : "Want to discuss a new project?",
     "SAY_HELLO" : "Say hello! let's discuss your ideas and make it happen.",
@@ -26,5 +28,17 @@
     "PRIVACY_3" :"and agree to the processing of my data as outlined.",
 
     "IMPRINT": "Imprint",
-    "CONTACT_IMPRINT": "Contact"
+    "CONTACT_IMPRINT": "Contact",
+
+    "NAME" : "Your name",
+    "EMAIL" : "Your email",
+    "MESSAGE" : "Your message",
+    
+    "VALID_NAME": "Your email is required",
+    "VALID_EMAIL": "Your email is required",
+    "VALID_MESSAGE": "Your message is empty",
+    "VALID_PRIVACY": "Please accept the privacy policy.",
+
+    "SEND": "Send message",
+    "SEND_MAIL": "Email successfully sent!"
   }

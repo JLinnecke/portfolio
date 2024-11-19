@@ -18,6 +18,8 @@
     "REFERENCE" : "Referenzen",
     "WORK" : "Ich fühle mich sowohl in eigenständiger Arbeit als auch im Team wohl. Hier erfahren Sie, was meine Kolleginnen und Kollegen über die Zusammenarbeit mit mir sagen.",
     "REF_1" : "Johannes ist ein großartiger Teamplayer. Er ist stets bereit zu helfen und zeichnet sich durch ausgezeichnete Fähigkeiten zur Problemlösung aus.",
+    "REF_2" : "Johannes arbeitet eigenständig und ist stets bestrebt, seine Fähigkeiten zu erweitern und zu verbessern.",
+    "REF_3" : "Johannes bringt stets seine Ideen und Lösungen für Probleme ein, um mit seinem Team schneller zu einer Lösung zu gelangen.",
 
     "DISCUSS" : "Möchten Sie ein neues Projekt besprechen?",
     "SAY_HELLO" : "Sagen Sie Hallo! Lassen Sie uns Ihre Ideen besprechen und gemeinsam umsetzen.",
@@ -26,5 +28,17 @@
     "PRIVACY_3" :"gelesen und stimme zu.",
 
     "IMPRINT": "Impressum",
-    "CONTACT_IMPRINT": "Kontakt"
+    "CONTACT_IMPRINT": "Kontakt",
+
+    "NAME" : "Ihr Name",
+    "EMAIL" : "Ihre E-Mail-Adresse",
+    "MESSAGE" : "Ihre Nachricht",
+
+    "VALID_NAME": "Bitte geben Sie einen gültigen Namen ein.",
+    "VALID_EMAIL": "Bitte geben Sie eine gültige E-Mail Adresse ein.",
+    "VALID_MESSAGE": "Bitte geben Sie eine Nachricht ein.",
+    "VALID_PRIVACY": "Bitte stimmen Sie der Datenschutzerklärung zu.",
+
+    "SEND": "Senden",
+    "SEND_MAIL": "E-mail wurde versendet"
   }
